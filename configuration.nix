@@ -107,6 +107,7 @@
       "steam"
       "steam-original"
       "steam-unwrapped"
+      "libretro-genesis-plus-gx"
     ];
 
   services.flatpak.enable = true;
@@ -211,8 +212,7 @@
     mindustry
     openttd-jgrpp
 
-    ( retroarch.withCores
-    (cores: with cores; [ blastem ]) )
+    (retroarch.withCores (cores: with cores; [ genesis-plus-gx ]))
 
     wineWowPackages.stable
     winetricks

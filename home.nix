@@ -27,11 +27,6 @@
     userEmail = "sltamagotchi@gmail.com";
   };
 
-  home.file."Games/roms" = {
-    source = ./roms;
-    recursive = true;
-  };
-
   home.file.".config/konsolerc" = { source = ./konsole/konsolerc; };
 
   home.file.".local/share/konsole/Konsole.profile" = {

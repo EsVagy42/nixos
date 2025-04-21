@@ -138,24 +138,27 @@
       default = {
         ids = [ "*" ];
         extraConfig = ''
-                                        	  [main]
-                                        	  capslock = layer(capslock)
+          [main]
+          capslock = toggle(capslock)
 
-                                        	  [capslock]
+          [capslock]
+          h = left
+          j = down
+          k = up
+          l = right
+          e = C-right
+          b = C-left
+          0 = home
+          v = toggle(shift)
+          capslock = clear()
+          esc = clear()
 
-                                        	  h = left
-                                        	  j = down
-                                        	  k = up
-                                        	  l = right
-                                                  	  e = C-right
-                                                  	  b = C-left
-                                                  	  u = pageup
-                              			  d = pagedown
-                    				  0 = home
-                    				  4 = end
-          					  w = C-s
-          					  p = C-v
-          					  y = C-c
+          [capslock+control]
+          u = pageup
+          d = pagedown
+
+          [capslock+shift]
+          4 = end
         '';
       };
     };

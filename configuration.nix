@@ -182,6 +182,7 @@
     kdePackages.libkdepim
     kdePackages.kdepim-addons
     kdePackages.kdepim-runtime
+    kdePackages.kcontacts
 
     brave
 

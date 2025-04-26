@@ -235,7 +235,7 @@
 
     retroarch-full
 
-    wineWowPackages.stable
+    wine-staging
     winetricks
 
     beeper

@@ -168,107 +168,87 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs;
-    let
-      jgrpp = openttd.overrideAttrs (oldAttrs: rec {
-        pname = "openttd-jgrpp";
-        version = "0.65.2";
+  environment.systemPackages = with pkgs; [
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    kdePackages.krecorder
+    kdePackages.kweather
+    kdePackages.kcharselect
+    kdePackages.filelight
+    kdePackages.kcalc
+    kdePackages.cantor
+    kdePackages.kclock
+    kdePackages.kholidays
+    kdePackages.libkdepim
+    kdePackages.kdepim-addons
+    kdePackages.kdepim-runtime
+    kdePackages.kcontacts
 
-        src = fetchFromGitHub {
-          owner = "JGRennison";
-          repo = "OpenTTD-patches";
-          rev = "jgrpp-${version}";
-          hash = "sha256-CoWtFhR8U1PjvV4ID7R5cuFAD6jV8Ps6DtLOu6V55TM=";
-        };
-        patches = [ ];
+    brave
 
-        buildInputs = oldAttrs.buildInputs ++ [ zstd ];
+    kdePackages.zanshin
+    kdePackages.korganizer
+    kdePackages.merkuro
+    kdePackages.francis
 
-        meta = {
-          homepage = "https://github.com/JGRennison/OpenTTD-patches";
-          changelog =
-            "https://github.com/JGRennison/OpenTTD-patches/blob/jgrpp-${version}/jgrpp-changelog.md";
-          mainProgram = "openttd";
-        };
+    yt-dlp
 
-      });
-    in [
-      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-      #  wget
-      kdePackages.krecorder
-      kdePackages.kweather
-      kdePackages.kcharselect
-      kdePackages.filelight
-      kdePackages.kcalc
-      kdePackages.cantor
-      kdePackages.kclock
-      kdePackages.kholidays
-      kdePackages.libkdepim
-      kdePackages.kdepim-addons
-      kdePackages.kdepim-runtime
-      kdePackages.kcontacts
+    wl-clipboard
+    lldb
+    kdePackages.kompare
+    kdePackages.kdevelop
+    kdePackages.kcachegrind
+    gcc
+    gdb
+    clang-tools
+    bash-language-server
+    nixd
+    nixfmt
+    marksman
+    kdePackages.markdownpart
+    lua
+    lua-language-server
+    cppcheck
+    nixos-shell
 
-      brave
+    kdePackages.qtwebengine
+    kdePackages.qtlocation
+    kdePackages.ksystemstats # needed for the resource widgets
+    aspell # needed for spell checking
+    aspellDicts.en
+    aspellDicts.hu
+    kdePackages.qtmultimedia
 
-      kdePackages.zanshin
-      kdePackages.korganizer
-      kdePackages.merkuro
-      kdePackages.francis
+    gimp
+    inkscape
+    kdePackages.kdenlive
 
-      yt-dlp
+    srb2
+    superTuxKart
+    kdePackages.kjumpingcube
+    kdePackages.kigo
+    gnugo
+    crawlTiles
+    prismlauncher
+    mindustry
+    (with pkgs;
+      import ./jgrpp-0.65.2/jgrpp-0.65.2.nix {
+        inherit fetchFromGitHub;
+        inherit openttd;
+        inherit zstd;
+      })
 
-      wl-clipboard
-      lldb
-      kdePackages.kompare
-      kdePackages.kdevelop
-      kdePackages.kcachegrind
-      gcc
-      gdb
-      clang-tools
-      bash-language-server
-      nixd
-      nixfmt
-      marksman
-      kdePackages.markdownpart
-      lua
-      lua-language-server
-      cppcheck
-      nixos-shell
+    retroarch-full
 
-      kdePackages.qtwebengine
-      kdePackages.qtlocation
-      kdePackages.ksystemstats # needed for the resource widgets
-      aspell # needed for spell checking
-      aspellDicts.en
-      aspellDicts.hu
-      kdePackages.qtmultimedia
+    wineWowPackages.staging
+    winetricks
 
-      gimp
-      inkscape
-      kdePackages.kdenlive
+    beeper
 
-      srb2
-      superTuxKart
-      kdePackages.kjumpingcube
-      kdePackages.kigo
-      gnugo
-      crawlTiles
-      prismlauncher
-      mindustry
-
-      retroarch-full
-
-      wineWowPackages.staging
-      winetricks
-
-      beeper
-
-      libreoffice
-      pandoc
-      texliveFull
-
-      jgrpp
-    ];
+    libreoffice
+    pandoc
+    texliveFull
+  ];
 
   fonts.packages = with pkgs; [ nerd-fonts.hack ];
 

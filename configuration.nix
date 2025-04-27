@@ -168,82 +168,107 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-    kdePackages.krecorder
-    kdePackages.kweather
-    kdePackages.kcharselect
-    kdePackages.filelight
-    kdePackages.kcalc
-    kdePackages.cantor
-    kdePackages.kclock
-    kdePackages.kholidays
-    kdePackages.libkdepim
-    kdePackages.kdepim-addons
-    kdePackages.kdepim-runtime
-    kdePackages.kcontacts
+  environment.systemPackages = with pkgs;
+    let
+      jgrpp = openttd.overrideAttrs (oldAttrs: rec {
+        pname = "openttd-jgrpp";
+        version = "0.65.2";
 
-    brave
+        src = fetchFromGitHub {
+          owner = "JGRennison";
+          repo = "OpenTTD-patches";
+          rev = "jgrpp-${version}";
+          hash = "sha256-CoWtFhR8U1PjvV4ID7R5cuFAD6jV8Ps6DtLOu6V55TM=";
+        };
+        patches = [ ];
 
-    kdePackages.zanshin
-    kdePackages.korganizer
-    kdePackages.merkuro
-    kdePackages.francis
+        buildInputs = oldAttrs.buildInputs ++ [ zstd ];
 
-    yt-dlp
+        meta = {
+          homepage = "https://github.com/JGRennison/OpenTTD-patches";
+          changelog =
+            "https://github.com/JGRennison/OpenTTD-patches/blob/jgrpp-${version}/jgrpp-changelog.md";
+          mainProgram = "openttd";
+        };
 
-    wl-clipboard
-    lldb
-    kdePackages.kompare
-    kdePackages.kdevelop
-    kdePackages.kcachegrind
-    gcc
-    gdb
-    clang-tools
-    bash-language-server
-    nixd
-    nixfmt
-    marksman
-    kdePackages.markdownpart
-    lua
-    lua-language-server
-    cppcheck
-    nixos-shell
+      });
+    in [
+      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      #  wget
+      kdePackages.krecorder
+      kdePackages.kweather
+      kdePackages.kcharselect
+      kdePackages.filelight
+      kdePackages.kcalc
+      kdePackages.cantor
+      kdePackages.kclock
+      kdePackages.kholidays
+      kdePackages.libkdepim
+      kdePackages.kdepim-addons
+      kdePackages.kdepim-runtime
+      kdePackages.kcontacts
 
-    kdePackages.qtwebengine
-    kdePackages.qtlocation
-    kdePackages.ksystemstats # needed for the resource widgets
-    aspell # needed for spell checking
-    aspellDicts.en
-    aspellDicts.hu
-    kdePackages.qtmultimedia
+      brave
 
-    gimp
-    inkscape
-    kdePackages.kdenlive
+      kdePackages.zanshin
+      kdePackages.korganizer
+      kdePackages.merkuro
+      kdePackages.francis
 
-    srb2
-    superTuxKart
-    kdePackages.kjumpingcube
-    kdePackages.kigo
-    gnugo
-    crawlTiles
-    prismlauncher
-    mindustry
-    openttd-jgrpp
+      yt-dlp
 
-    retroarch-full
+      wl-clipboard
+      lldb
+      kdePackages.kompare
+      kdePackages.kdevelop
+      kdePackages.kcachegrind
+      gcc
+      gdb
+      clang-tools
+      bash-language-server
+      nixd
+      nixfmt
+      marksman
+      kdePackages.markdownpart
+      lua
+      lua-language-server
+      cppcheck
+      nixos-shell
 
-    wineWowPackages.staging
-    winetricks
+      kdePackages.qtwebengine
+      kdePackages.qtlocation
+      kdePackages.ksystemstats # needed for the resource widgets
+      aspell # needed for spell checking
+      aspellDicts.en
+      aspellDicts.hu
+      kdePackages.qtmultimedia
 
-    beeper
+      gimp
+      inkscape
+      kdePackages.kdenlive
 
-    libreoffice
-    pandoc
-    texliveFull
-  ];
+      srb2
+      superTuxKart
+      kdePackages.kjumpingcube
+      kdePackages.kigo
+      gnugo
+      crawlTiles
+      prismlauncher
+      mindustry
+
+      retroarch-full
+
+      wineWowPackages.staging
+      winetricks
+
+      beeper
+
+      libreoffice
+      pandoc
+      texliveFull
+
+      jgrpp
+    ];
 
   fonts.packages = with pkgs; [ nerd-fonts.hack ];
 

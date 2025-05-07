@@ -183,6 +183,7 @@
     kdePackages.kdepim-addons
     kdePackages.kdepim-runtime
     kdePackages.kcontacts
+    qalculate-qt
 
     brave
 

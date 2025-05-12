@@ -928,7 +928,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."ItemGeometries-1536x864" =
         "Applet-142:1072,224,464,240,0;Applet-167:1072,464,464,368,0;";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."ItemGeometries-1920x1080" =
-        "Applet-194:416,304,1072,736,0;Applet-203:1488,304,432,208,0;Applet-142:1488,512,432,208,0;Applet-167:1488,720,432,320,0;";
+        "Applet-194:416,304,1072,720,0;Applet-203:1488,304,432,208,0;Applet-142:1488,512,432,208,0;Applet-167:1488,720,432,304,0;";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."ItemGeometries-1922x1084" =
         "Applet-194:431.218,301.653,1072,736,0;Applet-203:1502.44,302.827,416,208,0;Applet-167:1502.44,717.653,416,320,0;Applet-142:1502.44,510.827,416,208,0;";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."ItemGeometries-1924x1087" =
@@ -946,7 +946,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."ItemGeometries-611x646" =
         "Applet-142:0,0,176,80,0;Applet-158:0,80,96,96,0;";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."ItemGeometriesHorizontal" =
-        "Applet-194:416,304,1072,736,0;Applet-203:1488,304,432,208,0;Applet-142:1488,512,432,208,0;Applet-167:1488,720,432,320,0;";
+        "Applet-194:416,304,1072,720,0;Applet-203:1488,304,432,208,0;Applet-142:1488,512,432,208,0;Applet-167:1488,720,432,304,0;";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."ItemGeometriesVertical" =
         "Applet-142:0,0,176,80,0;Applet-158:0,0,96,96,0;";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/24"."activityId" =
@@ -1389,6 +1389,8 @@
         "dwd|weather|Miskolc|12772";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/164/Configuration"."PreloadWeight" =
         42;
+      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/207/Configuration"."PreloadWeight" =
+        42;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/32"."immutability" =
         1;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/32"."plugin" =
@@ -1460,7 +1462,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44"."plugin" =
         "org.kde.plasma.brightness";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration"."PreloadWeight" =
-        60;
+        70;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogHeight" =
         540;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogWidth" =
@@ -1470,7 +1472,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/45"."plugin" =
         "org.kde.plasma.battery";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/45/Configuration"."PreloadWeight" =
-        60;
+        85;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/45/Configuration/General"."showPercentage" =
         true;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/46"."immutability" =
@@ -1498,7 +1500,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/ConfigDialog"."DialogWidth" =
         720;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/General"."extraItems" =
-        "org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.kdeconnect,org.kde.merkuro.contact.applet";
+        "org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.kdeconnect";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/General"."knownItems" =
         "org.kde.plasma.cameraindicator,org.kde.plasma.manage-inputmethod,org.kde.plasma.devicenotifier,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.clipboard,org.kde.plasma.keyboardlayout,org.kde.plasma.keyboardindicator,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.printmanager,org.kde.plasma.bluetooth,org.kde.plasma.brightness,org.kde.kdeconnect,org.kde.merkuro.contact.applet";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/General"."scaleIconsToFit" =
@@ -1514,6 +1516,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."ScreenMapping"."screenMapping" =
         "";
       "plasmanotifyrc"."Applications/beeper"."Seen" = true;
+      "plasmanotifyrc"."Applications/beepertexts"."Seen" = true;
       "plasmanotifyrc"."Applications/brave-browser"."Seen" = true;
       "plasmanotifyrc"."Notifications"."LowPriorityHistory" = true;
       "plasmarc"."Wallpapers"."usersWallpapers" = "";

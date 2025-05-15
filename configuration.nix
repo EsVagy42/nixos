@@ -176,7 +176,6 @@
     kdePackages.kcharselect
     kdePackages.filelight
     kdePackages.kcalc
-    kdePackages.cantor
     kdePackages.kclock
     kdePackages.kholidays
     kdePackages.libkdepim

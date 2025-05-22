@@ -1126,11 +1126,11 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194"."plugin" =
         "org.kde.plasma.webbrowser";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration"."PreloadWeight" =
-        95;
+        100;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration"."popupHeight" =
-        414;
+        600;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration"."popupWidth" =
-        560;
+        800;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/ConfigDialog"."DialogHeight" =
         540;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/ConfigDialog"."DialogWidth" =
@@ -1171,6 +1171,8 @@
         540;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/ConfigDialog"."DialogWidth" =
         720;
+      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."fill" =
+        false;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."groupingStrategy" =
         0;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."launchers" =
@@ -1188,7 +1190,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200"."plugin" =
         "org.kde.plasma.weather";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200/Configuration"."PreloadWeight" =
-        90;
+        100;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200/Configuration"."popupHeight" =
         273;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200/Configuration"."popupWidth" =
@@ -1378,7 +1380,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44"."plugin" =
         "org.kde.plasma.brightness";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration"."PreloadWeight" =
-        54;
+        59;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogHeight" =
         540;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogWidth" =

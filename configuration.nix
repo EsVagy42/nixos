@@ -186,6 +186,7 @@
     qalculate-qt
 
     brave
+    floorp
 
     kdePackages.zanshin
     kdePackages.korganizer

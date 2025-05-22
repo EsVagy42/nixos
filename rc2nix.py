@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#! /usr/bin/env nix
+#! nix shell nixpkgs#python3 --command python
 
 # https://github.com/nix-community/plasma-manager/blob/trunk/script/rc2nix.py
 # https://github.com/mcdonc/plasma-manager/blob/enable-look-and-feel-settings/script/rc2nix.rb

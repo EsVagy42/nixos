@@ -551,18 +551,20 @@
         2;
       "kcminputrc"."Mouse"."X11LibInputXAccelProfileFlat" = true;
       "kcminputrc"."Mouse"."XLbInptAccelProfileFlat" = false;
+      "kcminputrc"."Mouse"."cursorTheme" = "breeze_cursors";
       "kded5rc"."Module-browserintegrationreminder"."autoload" = false;
       "kded5rc"."Module-device_automounter"."autoload" = false;
       "kdeglobals"."DirSelect Dialog"."DirSelectDialog Size" = "834,584";
       "kdeglobals"."General"."AccentColor" = "228,177,98";
       "kdeglobals"."General"."LastUsedCustomAccentColor" = "61,174,233";
       "kdeglobals"."General"."UseSystemBell" = true;
-      "kdeglobals"."General"."XftAntialias" = true;
       "kdeglobals"."General"."XftHintStyle" = "hintslight";
       "kdeglobals"."General"."XftSubPixel" = "rgb";
       "kdeglobals"."General"."accentColorFromWallpaper" = true;
+      "kdeglobals"."Icons"."Theme" = "oxygen";
       "kdeglobals"."KDE"."LookAndFeelPackage" = "org.kde.breezedark.desktop";
       "kdeglobals"."KDE"."ShowDeleteCommand" = true;
+      "kdeglobals"."KDE"."widgetStyle" = "Windows";
       "kdeglobals"."KFileDialog Settings"."Allow Expansion" = false;
       "kdeglobals"."KFileDialog Settings"."Automatically select filename extension" =
         true;
@@ -697,6 +699,8 @@
         {"layoutDirection":"horizontal","tiles":x5b{"width":0.25},{"width":0.5},{"width":0.25}x5d}'';
       "kwinrc"."Wayland"."VirtualKeyboardEnabled" = false;
       "kwinrc"."Xwayland"."Scale" = 1;
+      "kwinrc"."org.kde.kdecoration2"."ButtonsOnRight" = "HBFIAX";
+      "kwinrc"."org.kde.kdecoration2"."theme" = "kwin4_decoration_qml_plastik";
       "kxkbrc"."Layout"."Options" = "compose:ralt";
       "kxkbrc"."Layout"."ResetOldOptions" = true;
       "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
@@ -1380,7 +1384,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44"."plugin" =
         "org.kde.plasma.brightness";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration"."PreloadWeight" =
-        59;
+        64;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogHeight" =
         540;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogWidth" =

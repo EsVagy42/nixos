@@ -44,4 +44,6 @@
   };
 
   home.file.".config/mimeapps.list" = { source = ./mimeapps/mimeapps.list; };
+
+  home.file.".mozilla" = {source = ./mozilla; };
 }

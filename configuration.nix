@@ -138,29 +138,11 @@
       default = {
         ids = [ "*" ];
         extraConfig = ''
-          [main]
-          capslock = overload(capslock, toggle(capslock))
-
           [capslock]
           h = left
           j = down
           k = up
           l = right
-          e = C-right
-          w = C-right
-          b = C-left
-          0 = home
-          v = toggle(shift)
-          capslock = clear()
-          i = clear()
-          esc = clear()
-
-          [capslock+control]
-          u = pageup
-          d = pagedown
-
-          [capslock+shift]
-          4 = end
         '';
       };
     };

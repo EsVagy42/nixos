@@ -265,6 +265,14 @@
       cores = 4;
       graphics = true;
     };
+
+    gtk = {
+      enable = true;
+      theme = {
+        name = "Breeze-Dark";
+        package = pkgs.kdePackages.breeze-gtk;
+      };
+    };
   };
 
   # This value determines the NixOS release from which the default

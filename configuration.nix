@@ -138,6 +138,9 @@
       default = {
         ids = [ "*" ];
         extraConfig = ''
+          [main]
+          capslock = layer(capslock)
+
           [capslock]
           h = left
           j = down

@@ -81,7 +81,9 @@
  <ToolBar name="sessionToolbar" noMerge="1">
   <text translationDomain="konsole">Session Toolbar</text>
   <index>1</index>
- </ToolBar>
+ <Action name="hamburger_menu"/>
+<Action name="hamburger_menu"/>
+</ToolBar>
  <ActionProperties scheme="Default">
   <Action name="clear-history-and-reset" shortcut="; "/>
  </ActionProperties>

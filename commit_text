@@ -1,1 +1,1 @@
-Added xdg-desktop-portal-kde
+Set GTK_USE_PORTAL to 1 globally

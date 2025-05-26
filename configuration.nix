@@ -151,6 +151,10 @@
     };
   };
 
+  environment.sessionVariables = {
+    GTK_USE_PORTAL = 1;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [

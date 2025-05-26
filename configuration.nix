@@ -173,6 +173,7 @@
     brave
     floorp
     kdePackages.plasma-browser-integration
+    kdePackages.xdg-desktop-portal-kde
 
     kdePackages.zanshin
     kdePackages.korganizer

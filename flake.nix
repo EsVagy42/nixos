@@ -29,28 +29,38 @@
       };
       lib = nixpkgs.lib;
     in {
-      nixosConfigurations = {
-        nixos = lib.nixosSystem {
-          inherit system;
-          modules = [
-            {
-              environment.systemPackages =
-                [ inputs.nixvim.packages.${system}.default ];
-            }
-            ./configuration.nix
-            ./devices/default/default.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.sharedModules =
-                [ plasma-manager.homeManagerModules.plasma-manager ];
+      nixosConfigurations = let
+        baseSystem = { productiveBuild }:
+          lib.nixosSystem {
+            inherit system;
+            modules = [
+              {
+                environment.systemPackages =
+                  [ inputs.nixvim.packages.${system}.default ];
+              }
+              ({ lib, ... }: {
+                options.productiveBuild = lib.mkOption {
+                  type = lib.types.bool;
+                  default = productiveBuild;
+                };
+              })
+              ./configuration.nix
+              ./devices/default/default.nix
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.sharedModules =
+                  [ plasma-manager.homeManagerModules.plasma-manager ];
 
-              home-manager.users.esvagy = { imports = [ ./home.nix ]; };
-            }
-            flatpaks.nixosModules.declarative-flatpak
-          ];
-        };
+                home-manager.users.esvagy = { imports = [ ./home.nix ]; };
+              }
+              flatpaks.nixosModules.declarative-flatpak
+            ];
+          };
+      in {
+        nixos = baseSystem { productiveBuild = false; };
+        productive = baseSystem { productiveBuild = true; };
         alt = lib.nixosSystem {
           inherit system;
           modules = [

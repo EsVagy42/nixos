@@ -95,7 +95,7 @@
   programs.kdeconnect.enable = true;
 
   programs.steam = {
-    enable = true;
+    enable = !config.productiveBuild;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
@@ -126,7 +126,9 @@
     ];
 
   services.flatpak.enable = true;
-  services.flatpak.packages =
+  services.flatpak.packages = if config.productiveBuild then
+    [ ]
+  else
     [ "flathub:app/org.opensurge2d.OpenSurge//stable" ];
   services.flatpak.remotes = {
     "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
@@ -151,97 +153,101 @@
     };
   };
 
-  environment.sessionVariables = {
-    GTK_USE_PORTAL = 1;
-  };
+  environment.sessionVariables = { GTK_USE_PORTAL = 1; };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-    kdePackages.krecorder
-    kdePackages.kweather
-    kdePackages.kcharselect
-    kdePackages.filelight
-    kdePackages.kcalc
-    kdePackages.kclock
-    kdePackages.kholidays
-    kdePackages.libkdepim
-    kdePackages.kdepim-addons
-    kdePackages.kdepim-runtime
-    kdePackages.kcontacts
-    libqalculate
-    qalculate-qt
+  environment.systemPackages = let
+    basePackages = with pkgs; [
+      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      #  wget
+      kdePackages.krecorder
+      kdePackages.kweather
+      kdePackages.kcharselect
+      kdePackages.filelight
+      kdePackages.kcalc
+      kdePackages.kclock
+      kdePackages.kholidays
+      kdePackages.libkdepim
+      kdePackages.kdepim-addons
+      kdePackages.kdepim-runtime
+      kdePackages.kcontacts
+      libqalculate
+      qalculate-qt
 
-    brave
-    floorp
-    kdePackages.plasma-browser-integration
-    kdePackages.xdg-desktop-portal-kde
+      brave
+      floorp
+      kdePackages.plasma-browser-integration
+      kdePackages.xdg-desktop-portal-kde
 
-    kdePackages.zanshin
-    kdePackages.korganizer
-    kdePackages.merkuro
-    kdePackages.francis
+      kdePackages.zanshin
+      kdePackages.korganizer
+      kdePackages.merkuro
+      kdePackages.francis
 
-    yt-dlp
+      wl-clipboard
+      lldb
+      kdePackages.kompare
+      kdePackages.kdevelop
+      kdePackages.kcachegrind
+      gcc
+      gdb
+      clang-tools
+      bash-language-server
+      nixd
+      nixfmt
+      marksman
+      kdePackages.markdownpart
+      lua
+      lua-language-server
+      cppcheck
+      nixos-shell
 
-    wl-clipboard
-    lldb
-    kdePackages.kompare
-    kdePackages.kdevelop
-    kdePackages.kcachegrind
-    gcc
-    gdb
-    clang-tools
-    bash-language-server
-    nixd
-    nixfmt
-    marksman
-    kdePackages.markdownpart
-    lua
-    lua-language-server
-    cppcheck
-    nixos-shell
+      kdePackages.qtwebengine
+      kdePackages.qtlocation
+      kdePackages.ksystemstats # needed for the resource widgets
+      aspell # needed for spell checking
+      aspellDicts.en
+      aspellDicts.hu
+      kdePackages.qtmultimedia
 
-    kdePackages.qtwebengine
-    kdePackages.qtlocation
-    kdePackages.ksystemstats # needed for the resource widgets
-    aspell # needed for spell checking
-    aspellDicts.en
-    aspellDicts.hu
-    kdePackages.qtmultimedia
+      gimp
+      inkscape
+      kdePackages.kdenlive
 
-    gimp
-    inkscape
-    kdePackages.kdenlive
+      libreoffice
+      pandoc
+      texliveFull
 
-    srb2
-    superTuxKart
-    kdePackages.kjumpingcube
-    kdePackages.kigo
-    gnugo
-    crawlTiles
-    prismlauncher
-    mindustry
-    (with pkgs;
-      import ./jgrpp-0.65.2/jgrpp-0.65.2.nix {
-        inherit fetchFromGitHub;
-        inherit openttd;
-        inherit zstd;
-      })
+      beeper
+    ];
+    unproductivePackages = with pkgs; [
+      yt-dlp
 
-    retroarch-full
+      srb2
+      superTuxKart
+      kdePackages.kjumpingcube
+      kdePackages.kigo
+      gnugo
+      crawlTiles
+      prismlauncher
+      mindustry
+      (with pkgs;
+        import ./jgrpp-0.65.2/jgrpp-0.65.2.nix {
+          inherit fetchFromGitHub;
+          inherit openttd;
+          inherit zstd;
+        })
 
-    wineWowPackages.staging
-    winetricks
+      retroarch-full
 
-    beeper
-
-    libreoffice
-    pandoc
-    texliveFull
-  ];
+      wineWowPackages.staging
+      winetricks
+    ];
+  in if config.productiveBuild then
+    basePackages
+  else
+    basePackages ++ unproductivePackages;
 
   fonts.packages = with pkgs; [ nerd-fonts.hack ];
 
@@ -290,6 +296,37 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
+
+  services.blocky = {
+    enable = config.productiveBuild;
+    settings = {
+      ports.dns = 53; # Port for incoming DNS Queries.
+      upstreams.groups.default = [
+        "https://one.one.one.one/dns-query" # Using Cloudflare's DNS over HTTPS server for resolving queries.
+      ];
+      # For initially solving DoH/DoT Requests when no system Resolver is available.
+      bootstrapDns = {
+        upstream = "https://one.one.one.one/dns-query";
+        ips = [ "1.1.1.1" "1.0.0.1" ];
+      };
+      #Enable Blocking of certian domains.
+      blocking = {
+        blackLists = {
+          unproductive = [''
+            |
+            	    www.youtube.com
+            	    tilvids.com
+            	    mastodon.social
+            	    online-go.com
+            	  ''];
+        };
+        #Configure what block categories are used
+        clientGroupsBlock = { default = [ "unproductive" ]; };
+      };
+    };
+  };
+  networking.nameservers =
+    if config.productiveBuild then [ "127.0.0.1" ] else [ ];
 
 }
 

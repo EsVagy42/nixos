@@ -125,15 +125,6 @@
       "libretro-snes9x2010"
     ];
 
-  services.flatpak.enable = true;
-  services.flatpak.packages = if config.productiveBuild then
-    [ ]
-  else
-    [ "flathub:app/org.opensurge2d.OpenSurge//stable" ];
-  services.flatpak.remotes = {
-    "flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
-  };
-
   services.keyd = {
     enable = true;
     keyboards = {

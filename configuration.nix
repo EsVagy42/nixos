@@ -279,13 +279,13 @@
       cores = 4;
       graphics = true;
     };
+  };
 
-    gtk = {
-      enable = true;
-      theme = {
-        name = "Breeze-Dark";
-        package = pkgs.kdePackages.breeze-gtk;
-      };
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Breeze-Dark";
+      package = pkgs.kdePackages.breeze-gtk;
     };
   };
 

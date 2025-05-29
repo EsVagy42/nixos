@@ -655,8 +655,9 @@
       "kwinrc"."Effect-mousemark"."Freedrawshift" = false;
       "kwinrc"."Effect-thumbnailaside"."MaxWidth" = 400;
       "kwinrc"."NightColor"."Active" = true;
+      "kwinrc"."NightColor"."EveningBeginFixed" = 2000;
       "kwinrc"."NightColor"."Mode" = "Times";
-      "kwinrc"."NightColor"."MorningBeginFixed" = 500;
+      "kwinrc"."NightColor"."MorningBeginFixed" = 600;
       "kwinrc"."Plugins"."kwin4_effect_geometry_changeEnabled" = true;
       "kwinrc"."Plugins"."mousemarkEnabled" = true;
       "kwinrc"."Plugins"."shakecursorEnabled" = false;

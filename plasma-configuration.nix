@@ -1210,7 +1210,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200/Configuration/Units"."visibilityUnit" =
         2007;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200/Configuration/WeatherStation"."source" =
-        "dwd|weather|Miskolc|12772";
+        "dwd|weather|Budapest|12840";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/203"."immutability" =
         1;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/203"."plugin" =

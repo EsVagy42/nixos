@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    flatpaks.url = "github:GermanBread/declarative-flatpak/stable-v3";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,7 +19,7 @@
   };
 
   outputs =
-    { nixpkgs, home-manager, plasma-manager, flatpaks, nixvim, ... }@inputs:
+    { nixpkgs, home-manager, plasma-manager, nixvim, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -55,7 +54,6 @@
 
                 home-manager.users.esvagy = { imports = [ ./home.nix ]; };
               }
-              flatpaks.nixosModules.declarative-flatpak
             ];
           };
       in {
@@ -75,7 +73,6 @@
 
               home-manager.users.esvagy = { imports = [ ./home.nix ]; };
             }
-            flatpaks.nixosModules.declarative-flatpak
           ];
         };
       };

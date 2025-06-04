@@ -1,5 +1,20 @@
 {
   programs.plasma = {
+    kwin = {
+      nightLight = {
+	enable = true;
+	mode = "times";
+	temperature = {
+	  day = 6500;
+	  night = 4500;
+	};
+	time = {
+	  evening = "20:00";
+	  morning = "06:00";
+	};
+	transitionTime = 30;
+      };
+    };
     enable = true;
     shortcuts = {
       "ActivityManager"."switch-to-activity-7815803c-28fd-459f-8c3e-1add2e558ae8" =
@@ -654,10 +669,6 @@
       "kwinrc"."Effect-mousemark"."Freedrawalt" = true;
       "kwinrc"."Effect-mousemark"."Freedrawshift" = false;
       "kwinrc"."Effect-thumbnailaside"."MaxWidth" = 400;
-      "kwinrc"."NightColor"."Active" = true;
-      "kwinrc"."NightColor"."EveningBeginFixed" = 2000;
-      "kwinrc"."NightColor"."Mode" = "Times";
-      "kwinrc"."NightColor"."MorningBeginFixed" = 600;
       "kwinrc"."Plugins"."kwin4_effect_geometry_changeEnabled" = true;
       "kwinrc"."Plugins"."mousemarkEnabled" = true;
       "kwinrc"."Plugins"."shakecursorEnabled" = false;

@@ -220,7 +220,6 @@
       kdePackages.kjumpingcube
       kdePackages.kigo
       gnugo
-      crawl
       crawlTiles
       prismlauncher
       mindustry

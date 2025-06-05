@@ -222,8 +222,6 @@
       gnugo
       crawl
       crawlTiles
-      nethack
-      nethack-qt
       prismlauncher
       mindustry
       (with pkgs;

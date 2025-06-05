@@ -220,7 +220,10 @@
       kdePackages.kjumpingcube
       kdePackages.kigo
       gnugo
+      crawl
       crawlTiles
+      nethack
+      nethack-qt
       prismlauncher
       mindustry
       (with pkgs;

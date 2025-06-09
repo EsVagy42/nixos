@@ -1,5 +1,7 @@
 {
   programs.plasma = {
+    enable = true;
+    overrideConfig = true;
     kwin = {
       nightLight = {
 	enable = true;
@@ -15,7 +17,6 @@
 	transitionTime = 30;
       };
     };
-    enable = true;
     shortcuts = {
       "ActivityManager"."switch-to-activity-7815803c-28fd-459f-8c3e-1add2e558ae8" =
         [ ];

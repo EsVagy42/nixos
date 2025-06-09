@@ -200,6 +200,7 @@
       aspellDicts.en
       aspellDicts.hu
       kdePackages.qtmultimedia
+      kdePackages.karousel
 
       gimp
       inkscape

@@ -1635,6 +1635,7 @@
       "spectaclerc"."ImageSave"."translatedScreenshotsFolder" = "Screenshots";
       "spectaclerc"."VideoSave"."preferredVideoFormat" = 2;
       "spectaclerc"."VideoSave"."translatedScreencastsFolder" = "Screencasts";
+      "plasmashellrc"."PIMEventsPlugin"."calendars" = 265; # set the calendar used for the clock/calendar widget in the top panel
     };
   };
 }

@@ -118,9 +118,9 @@
       "kwin"."Switch to Desktop 7" = [ ];
       "kwin"."Switch to Desktop 8" = [ ];
       "kwin"."Switch to Desktop 9" = [ ];
-      "kwin"."Switch to Next Desktop" = [];
+      "kwin"."Switch to Next Desktop" = "Meta+Alt+L";
       "kwin"."Switch to Next Screen" = [ ];
-      "kwin"."Switch to Previous Desktop" = [];
+      "kwin"."Switch to Previous Desktop" = "Meta+Alt+H";
       "kwin"."Switch to Previous Screen" = [ ];
       "kwin"."Switch to Screen 0" = [ ];
       "kwin"."Switch to Screen 1" = [ ];

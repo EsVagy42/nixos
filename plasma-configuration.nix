@@ -221,6 +221,172 @@
       "kwin"."Window to Screen 7" = [ ];
       "kwin"."view_actual_size" = "Meta+0";
       "kwin"."view_zoom_in" = [ "Meta++" "Meta+=" ];
+      "kwin"."karousel-column-move-end" =
+        "Meta+Ctrl+Alt+End";
+      "kwin"."karousel-column-move-left" =
+        "Meta+Ctrl+Alt+H";
+      "kwin"."karousel-column-move-right" =
+        "Meta+Ctrl+Alt+L";
+      "kwin"."karousel-column-move-start" =
+        "Meta+Ctrl+Alt+Home";
+      "kwin"."karousel-column-move-to-column-1" =
+        "Meta+Ctrl+Shift+1";
+      "kwin"."karousel-column-move-to-column-10" = [ ];
+      "kwin"."karousel-column-move-to-column-11" = [ ];
+      "kwin"."karousel-column-move-to-column-12" = [ ];
+      "kwin"."karousel-column-move-to-column-2" =
+        "Meta+Ctrl+Shift+2";
+      "kwin"."karousel-column-move-to-column-3" =
+        "Meta+Ctrl+Shift+3";
+      "kwin"."karousel-column-move-to-column-4" =
+        "Meta+Ctrl+Shift+4";
+      "kwin"."karousel-column-move-to-column-5" =
+        "Meta+Ctrl+Shift+5";
+      "kwin"."karousel-column-move-to-column-6" =
+        "Meta+Ctrl+Shift+6";
+      "kwin"."karousel-column-move-to-column-7" =
+        "Meta+Ctrl+Shift+7";
+      "kwin"."karousel-column-move-to-column-8" =
+        "Meta+Ctrl+Shift+8";
+      "kwin"."karousel-column-move-to-column-9" =
+        "Meta+Ctrl+Shift+9";
+      "kwin"."karousel-column-move-to-desktop-1" =
+        "Meta+Ctrl+Shift+F1";
+      "kwin"."karousel-column-move-to-desktop-10" =
+        "Meta+Ctrl+Shift+F10";
+      "kwin"."karousel-column-move-to-desktop-11" =
+        "Meta+Ctrl+Shift+F11";
+      "kwin"."karousel-column-move-to-desktop-12" =
+        "Meta+Ctrl+Shift+F12";
+      "kwin"."karousel-column-move-to-desktop-2" =
+        "Meta+Ctrl+Shift+F2";
+      "kwin"."karousel-column-move-to-desktop-3" =
+        "Meta+Ctrl+Shift+F3";
+      "kwin"."karousel-column-move-to-desktop-4" =
+        "Meta+Ctrl+Shift+F4";
+      "kwin"."karousel-column-move-to-desktop-5" =
+        "Meta+Ctrl+Shift+F5";
+      "kwin"."karousel-column-move-to-desktop-6" =
+        "Meta+Ctrl+Shift+F6";
+      "kwin"."karousel-column-move-to-desktop-7" =
+        "Meta+Ctrl+Shift+F7";
+      "kwin"."karousel-column-move-to-desktop-8" =
+        "Meta+Ctrl+Shift+F8";
+      "kwin"."karousel-column-move-to-desktop-9" =
+        "Meta+Ctrl+Shift+F9";
+      "kwin"."karousel-column-toggle-stacked" =
+        "Meta+X";
+      "kwin"."karousel-column-width-decrease" = [ ];
+      "kwin"."karousel-column-width-increase" = [ ];
+      "kwin"."karousel-columns-squeeze-left" = [ ];
+      "kwin"."karousel-columns-squeeze-right" =
+        "Meta+Ctrl+D";
+      "kwin"."karousel-columns-width-equalize" = [ ];
+      "kwin"."karousel-cycle-preset-widths" =
+        "Meta+R";
+      "kwin"."karousel-cycle-preset-widths-reverse" = [ ];
+      "kwin"."karousel-focus-1" = [ ];
+      "kwin"."karousel-focus-10" = [ ];
+      "kwin"."karousel-focus-11" = [ ];
+      "kwin"."karousel-focus-12" = [ ];
+      "kwin"."karousel-focus-2" = [ ];
+      "kwin"."karousel-focus-3" = [ ];
+      "kwin"."karousel-focus-4" = [ ];
+      "kwin"."karousel-focus-5" = [ ];
+      "kwin"."karousel-focus-6" = [ ];
+      "kwin"."karousel-focus-7" = [ ];
+      "kwin"."karousel-focus-8" = [ ];
+      "kwin"."karousel-focus-9" = [ ];
+      "kwin"."karousel-focus-down" = "Meta+J";
+      "kwin"."karousel-focus-end" = "Meta+End";
+      "kwin"."karousel-focus-left" = "Meta+H";
+      "kwin"."karousel-focus-next" =
+        "Meta+>";
+      "kwin"."karousel-focus-previous" =
+        "Meta+<";
+      "kwin"."karousel-focus-right" = "Meta+L";
+      "kwin"."karousel-focus-start" =
+        "Meta+Home";
+      "kwin"."karousel-focus-up" = "Meta+K";
+      "kwin"."karousel-grid-scroll-end" =
+        "Meta+Shift+End";
+      "kwin"."karousel-grid-scroll-focused" =
+        "Meta+C";
+      "kwin"."karousel-grid-scroll-left" =
+        "Meta+Alt+Shift+H";
+      "kwin"."karousel-grid-scroll-left-column" =
+        "Meta+Shift+H";
+      "kwin"."karousel-grid-scroll-right" =
+        "Meta+Alt+Shift+L";
+      "kwin"."karousel-grid-scroll-right-column" =
+        "Meta+Shift+L";
+      "kwin"."karousel-grid-scroll-start" =
+        "Meta+Shift+Home";
+      "kwin"."karousel-screen-switch" =
+        "Meta+Ctrl+Return";
+      "kwin"."karousel-tail-move-to-desktop-1" =
+        "Meta+Ctrl+Alt+Shift+F1";
+      "kwin"."karousel-tail-move-to-desktop-10" =
+        "Meta+Ctrl+Alt+Shift+F10";
+      "kwin"."karousel-tail-move-to-desktop-11" =
+        "Meta+Ctrl+Alt+Shift+F11";
+      "kwin"."karousel-tail-move-to-desktop-12" =
+        "Meta+Ctrl+Alt+Shift+F12";
+      "kwin"."karousel-tail-move-to-desktop-2" =
+        "Meta+Ctrl+Alt+Shift+F2";
+      "kwin"."karousel-tail-move-to-desktop-3" =
+        "Meta+Ctrl+Alt+Shift+F3";
+      "kwin"."karousel-tail-move-to-desktop-4" =
+        "Meta+Ctrl+Alt+Shift+F4";
+      "kwin"."karousel-tail-move-to-desktop-5" =
+        "Meta+Ctrl+Alt+Shift+F5";
+      "kwin"."karousel-tail-move-to-desktop-6" =
+        "Meta+Ctrl+Alt+Shift+F6";
+      "kwin"."karousel-tail-move-to-desktop-7" =
+        "Meta+Ctrl+Alt+Shift+F7";
+      "kwin"."karousel-tail-move-to-desktop-8" =
+        "Meta+Ctrl+Alt+Shift+F8";
+      "kwin"."karousel-tail-move-to-desktop-9" =
+        "Meta+Ctrl+Alt+Shift+F9";
+      "kwin"."karousel-window-move-down" =
+        "Meta+Ctrl+J";
+      "kwin"."karousel-window-move-end" =
+        "Meta+Ctrl+End";
+      "kwin"."karousel-window-move-left" =
+        "Meta+Ctrl+H";
+      "kwin"."karousel-window-move-next" =
+        "Meta+Alt+>";
+      "kwin"."karousel-window-move-previous" =
+        "Meta+Alt+<";
+      "kwin"."karousel-window-move-right" =
+        "Meta+Ctrl+L";
+      "kwin"."karousel-window-move-start" =
+        "Meta+Ctrl+Home";
+      "kwin"."karousel-window-move-to-column-1" =
+        "Meta+Shift+1";
+      "kwin"."karousel-window-move-to-column-10" = [ ];
+      "kwin"."karousel-window-move-to-column-11" = [ ];
+      "kwin"."karousel-window-move-to-column-12" = [ ];
+      "kwin"."karousel-window-move-to-column-2" =
+        "Meta+Shift+2";
+      "kwin"."karousel-window-move-to-column-3" =
+        "Meta+Shift+3";
+      "kwin"."karousel-window-move-to-column-4" =
+        "Meta+Shift+4";
+      "kwin"."karousel-window-move-to-column-5" =
+        "Meta+Shift+5";
+      "kwin"."karousel-window-move-to-column-6" =
+        "Meta+Shift+6";
+      "kwin"."karousel-window-move-to-column-7" =
+        "Meta+Shift+7";
+      "kwin"."karousel-window-move-to-column-8" =
+        "Meta+Shift+8";
+      "kwin"."karousel-window-move-to-column-9" =
+        "Meta+Shift+9";
+      "kwin"."karousel-window-move-up" =
+        "Meta+Ctrl+K";
+      "kwin"."karousel-window-toggle-floating" =
+        "Meta+Space";
       "kwin"."view_zoom_out" = "Meta+-";
       "mediacontrol"."mediavolumedown" = [ ];
       "mediacontrol"."mediavolumeup" = [ ];
@@ -250,12 +416,12 @@
         "Keyboard Light On/Off";
       "org_kde_powerdevil"."Turn Off Screen" = [ ];
       "org_kde_powerdevil"."powerProfile" =
-        [ "Battery" "" "Meta+B\\, ,Battery" "Meta+B,Switch Power Profile" ];
+        [ "Battery" ];
       "plasmashell"."activate application launcher" =
-        [ "Alt+F1" "Alt+F1,Activate Application Launcher" ];
+        [ "Alt+F1" ];
       "plasmashell"."activate task manager entry 1" = "Meta+1";
       "plasmashell"."activate task manager entry 10" =
-        ",Meta+0,Activate Task Manager Entry 10";
+        [];
       "plasmashell"."activate task manager entry 2" = "Meta+2";
       "plasmashell"."activate task manager entry 3" = "Meta+3";
       "plasmashell"."activate task manager entry 4" = "Meta+4";
@@ -267,7 +433,7 @@
       "plasmashell"."clear-history" = [ ];
       "plasmashell"."clipboard_action" = "Meta+Ctrl+X";
       "plasmashell"."cycle-panels" = "Meta+Alt+P";
-      "plasmashell"."cycleNextAction" = "none,,Next History Item";
+      "plasmashell"."cycleNextAction" = [];
       "plasmashell"."cyclePrevAction" = [ ];
       "plasmashell"."manage activities" = "Meta+Q";
       "plasmashell"."next activity" = "Meta+A";

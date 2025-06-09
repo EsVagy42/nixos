@@ -744,7 +744,6 @@
       "kded5rc"."Module-browserintegrationreminder"."autoload" = false;
       "kded5rc"."Module-device_automounter"."autoload" = false;
       "kdeglobals"."DirSelect Dialog"."DirSelectDialog Size" = "834,584";
-      "kdeglobals"."General"."AccentColor" = "228,177,98";
       "kdeglobals"."General"."LastUsedCustomAccentColor" = "61,174,233";
       "kdeglobals"."General"."UseSystemBell" = true;
       "kdeglobals"."General"."XftHintStyle" = "hintslight";

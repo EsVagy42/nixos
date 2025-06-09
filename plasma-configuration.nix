@@ -1361,10 +1361,10 @@
         720;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."fill" =
         false;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."groupingStrategy" =
-        0;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."launchers" =
         "";
+      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."sortingStrategy" =
+        2;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/197"."immutability" =
         1;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/197"."plugin" =

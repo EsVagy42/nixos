@@ -19,6 +19,18 @@
     };
     workspace.lookAndFeel = "org.kde.breezedark.desktop";
     workspace.theme = "breeze-dark";
+    window-rules = [
+      {
+	description = "No decorations";
+	match = {};
+	apply = {
+	  "noborder" = {
+	    apply = "initially";
+	    value = true;
+	  };
+	};
+      }
+    ];
     shortcuts = {
       "ActivityManager"."switch-to-activity-7815803c-28fd-459f-8c3e-1add2e558ae8" =
         [ ];

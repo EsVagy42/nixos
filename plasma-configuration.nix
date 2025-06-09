@@ -1649,6 +1649,11 @@
       "spectaclerc"."VideoSave"."translatedScreencastsFolder" = "Screencasts";
       "plasmashellrc"."PIMEventsPlugin"."calendars" = 265; # set the calendar used for the clock/calendar widget in the top panel
       "plasma_calendar_holiday_regions"."General"."selectedRegions" = "hu_hu"; # set holidays for the widget
+      "kwinrc"."Plugins"."translucencyEnabled" = true; # enable and set up translucency for inactive windows
+      "kwinrc"."Effect-translucency" = {
+	Inactive = 90;
+	MoveResize = 100;
+      };
     };
   };
 }

@@ -82,14 +82,22 @@
       "kwin"."Setup Window Shortcut" = [ ];
       "kwin"."Show Desktop" = "Meta+D";
       "kwin"."Suspend Compositing" = "Alt+Shift+F12";
-      "kwin"."Switch One Desktop Down" = "Meta+Ctrl+J";
-      "kwin"."Switch One Desktop Up" = "Meta+Ctrl+K";
-      "kwin"."Switch One Desktop to the Left" = "Meta+Ctrl+H";
-      "kwin"."Switch One Desktop to the Right" = "Meta+Ctrl+L";
-      "kwin"."Switch Window Down" = "Meta+Alt+J";
-      "kwin"."Switch Window Left" = "Meta+Alt+H";
-      "kwin"."Switch Window Right" = "Meta+Alt+L";
-      "kwin"."Switch Window Up" = "Meta+Alt+K";
+      "kwin"."Switch One Desktop Down" =
+        [];
+      "kwin"."Switch One Desktop Up" =
+        [];
+      "kwin"."Switch One Desktop to the Left" =
+        [];
+      "kwin"."Switch One Desktop to the Right" =
+        "none,Meta+Ctrl+Right,Switch One Desktop to the Right";
+      "kwin"."Switch Window Down" =
+        [];
+      "kwin"."Switch Window Left" =
+        [];
+      "kwin"."Switch Window Right" =
+        [];
+      "kwin"."Switch Window Up" =
+        [];
       "kwin"."Switch to Desktop 1" = "Ctrl+F1";
       "kwin"."Switch to Desktop 10" = [ ];
       "kwin"."Switch to Desktop 11" = [ ];
@@ -110,9 +118,9 @@
       "kwin"."Switch to Desktop 7" = [ ];
       "kwin"."Switch to Desktop 8" = [ ];
       "kwin"."Switch to Desktop 9" = [ ];
-      "kwin"."Switch to Next Desktop" = "Meta+Alt+L";
+      "kwin"."Switch to Next Desktop" = [];
       "kwin"."Switch to Next Screen" = [ ];
-      "kwin"."Switch to Previous Desktop" = "Meta+Alt+H";
+      "kwin"."Switch to Previous Desktop" = [];
       "kwin"."Switch to Previous Screen" = [ ];
       "kwin"."Switch to Screen 0" = [ ];
       "kwin"."Switch to Screen 1" = [ ];
@@ -145,18 +153,18 @@
       "kwin"."Window Grow Horizontal" = [ ];
       "kwin"."Window Grow Vertical" = [ ];
       "kwin"."Window Lower" = [ ];
-      "kwin"."Window Maximize" = "Meta+I";
+      "kwin"."Window Maximize" = [];
       "kwin"."Window Maximize Horizontal" = [ ];
       "kwin"."Window Maximize Vertical" = [ ];
-      "kwin"."Window Minimize" = "Meta+O";
+      "kwin"."Window Minimize" = [];
       "kwin"."Window Move" = [ ];
       "kwin"."Window Move Center" = [ ];
       "kwin"."Window No Border" = [ ];
       "kwin"."Window On All Desktops" = [ ];
-      "kwin"."Window One Desktop Down" = "Meta+Ctrl+Shift+J";
-      "kwin"."Window One Desktop Up" = "Meta+Ctrl+Shift+K";
-      "kwin"."Window One Desktop to the Left" = "Meta+Ctrl+Shift+H";
-      "kwin"."Window One Desktop to the Right" = "Meta+Ctrl+Shift+L";
+      "kwin"."Window One Desktop Down" = [];
+      "kwin"."Window One Desktop Up" = [];
+      "kwin"."Window One Desktop to the Left" = [];
+      "kwin"."Window One Desktop to the Right" = [];
       "kwin"."Window One Screen Down" = [ ];
       "kwin"."Window One Screen Up" = [ ];
       "kwin"."Window One Screen to the Left" = [ ];
@@ -166,12 +174,12 @@
       "kwin"."Window Pack Left" = [ ];
       "kwin"."Window Pack Right" = [ ];
       "kwin"."Window Pack Up" = [ ];
-      "kwin"."Window Quick Tile Bottom" = "Meta+J";
+      "kwin"."Window Quick Tile Bottom" = [];
       "kwin"."Window Quick Tile Bottom Left" = [ ];
       "kwin"."Window Quick Tile Bottom Right" = [ ];
-      "kwin"."Window Quick Tile Left" = "Meta+H";
-      "kwin"."Window Quick Tile Right" = "Meta+L";
-      "kwin"."Window Quick Tile Top" = "Meta+K";
+      "kwin"."Window Quick Tile Left" = [];
+      "kwin"."Window Quick Tile Right" = [];
+      "kwin"."Window Quick Tile Top" = [];
       "kwin"."Window Quick Tile Top Left" = [ ];
       "kwin"."Window Quick Tile Top Right" = [ ];
       "kwin"."Window Raise" = [ ];
@@ -200,9 +208,9 @@
       "kwin"."Window to Desktop 8" = [ ];
       "kwin"."Window to Desktop 9" = [ ];
       "kwin"."Window to Next Desktop" = [ ];
-      "kwin"."Window to Next Screen" = "Meta+Shift+L";
+      "kwin"."Window to Next Screen" = [];
       "kwin"."Window to Previous Desktop" = [ ];
-      "kwin"."Window to Previous Screen" = "Meta+Shift+H";
+      "kwin"."Window to Previous Screen" = [];
       "kwin"."Window to Screen 0" = [ ];
       "kwin"."Window to Screen 1" = [ ];
       "kwin"."Window to Screen 2" = [ ];

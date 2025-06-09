@@ -17,6 +17,7 @@
 	transitionTime = 30;
       };
     };
+    programs.plasma.workspace.lookAndFeel = "org.kde.breezedark.desktop";
     shortcuts = {
       "ActivityManager"."switch-to-activity-7815803c-28fd-459f-8c3e-1add2e558ae8" =
         [ ];

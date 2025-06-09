@@ -17,7 +17,7 @@
 	transitionTime = 30;
       };
     };
-    workspace.lookAndFeel = "org.kde.breezedark.desktop";
+    workspace.theme = "breeze-dark";
     shortcuts = {
       "ActivityManager"."switch-to-activity-7815803c-28fd-459f-8c3e-1add2e558ae8" =
         [ ];

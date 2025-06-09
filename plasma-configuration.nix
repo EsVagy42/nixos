@@ -163,7 +163,7 @@
         [ ];
       "kwin"."Window Above Other Windows" = [ ];
       "kwin"."Window Below Other Windows" = [ ];
-      "kwin"."Window Close" = "Alt+F4";
+      "kwin"."Window Close" = "Meta+Backspace";
       "kwin"."Window Fullscreen" = [ ];
       "kwin"."Window Grow Horizontal" = [ ];
       "kwin"."Window Grow Vertical" = [ ];

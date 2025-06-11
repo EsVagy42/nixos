@@ -135,7 +135,7 @@
       "kmix"."mic_mute" = "Meta+Volume Mute";
       "kmix"."mute" = "Volume Mute";
       "ksmserver"."Halt Without Confirmation" = [ ];
-      "ksmserver"."Lock Session" = "Meta+Alt+L";
+      "ksmserver"."Lock Session" = "Meta+Alt+X";
       "ksmserver"."Log Out" = "Ctrl+Alt+Del";
       "ksmserver"."Log Out Without Confirmation" = [ ];
       "ksmserver"."LogOut" = [ ];

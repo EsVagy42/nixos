@@ -103,7 +103,6 @@
     kscreenlocker = {
       autoLock = true;
       lockOnResume = true;
-      lockOnStartup = true;
       passwordRequired = true;
       passwordRequiredDelay = 5;
       timeout = 5;

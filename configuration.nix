@@ -201,6 +201,15 @@
       aspellDicts.hu
       kdePackages.qtmultimedia
       kdePackages.karousel
+      (with pkgs;
+        import ./kwin4_effect_geometry_change/kwin4_effect_geometry_change.nix {
+          inherit lib;
+          inherit stdenv;
+          inherit fetchFromGitHub;
+          kpackage = kdePackages.kpackage;
+          kwin = kdePackages.kwin;
+          inherit nodejs;
+        })
 
       gimp
       inkscape

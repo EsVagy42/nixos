@@ -545,6 +545,29 @@
       "services/org.kde.spectacle.desktop"."RecordWindow" = [ ];
     };
     configFile = {
+      "plasmashellrc"."PIMEventsPlugin"."calendars" = 265; # set the calendar used for the clock/calendar widget in the top panel
+      "plasma_calendar_holiday_regions"."General"."selectedRegions" = "hu_hu"; # set holidays for the widget
+      "kwinrc"."Plugins"."translucencyEnabled" = true; # enable and set up translucency for inactive windows
+      "kwinrc"."Effect-translucency" = {
+	Inactive = 90;
+	MoveResize = 100;
+      };
+     "powerdevilrc" = {
+	"AC/Keyboard" = {
+	  "KeyboardBrightness" = 100;
+	  "UseProfileSpecificKeyboardBrightness" = true;
+	};
+	"Battery/Keyboard" = {
+	  "KeyboardBrightness" = 0;
+	  "UseProfileSpecificKeyboardBrightness" = true;
+	};
+	"LowBattery/Keyboard" = {
+	  "KeyboardBrightness" = 0;
+	  "UseProfileSpecificKeyboardBrightness" = true;
+	};
+     };
+
+
       "baloofilerc"."General"."dbVersion" = 2;
       "baloofilerc"."General"."exclude filters" =
         "*~,*.part,*.o,*.la,*.lo,*.loT,*.moc,moc_*.cpp,qrc_*.cpp,ui_*.h,cmake_install.cmake,CMakeCache.txt,CTestTestfile.cmake,libtool,config.status,confdefs.h,autom4te,conftest,confstat,Makefile.am,*.gcode,.ninja_deps,.ninja_log,build.ninja,*.csproj,*.m4,*.rej,*.gmo,*.pc,*.omf,*.aux,*.tmp,*.po,*.vm*,*.nvram,*.rcore,*.swp,*.swap,lzo,litmain.sh,*.orig,.histfile.*,.xsession-errors*,*.map,*.so,*.a,*.db,*.qrc,*.ini,*.init,*.img,*.vdi,*.vbox*,vbox.log,*.qcow2,*.vmdk,*.vhd,*.vhdx,*.sql,*.sql.gz,*.ytdl,*.tfstate*,*.class,*.pyc,*.pyo,*.elc,*.qmlc,*.jsc,*.fastq,*.fq,*.gb,*.fasta,*.fna,*.gbff,*.faa,po,CVS,.svn,.git,_darcs,.bzr,.hg,CMakeFiles,CMakeTmp,CMakeTmpQmake,.moc,.obj,.pch,.uic,.npm,.yarn,.yarn-cache,__pycache__,node_modules,node_packages,nbproject,.terraform,.venv,venv,core-dumps,lost+found";
@@ -1724,13 +1747,6 @@
       "spectaclerc"."ImageSave"."translatedScreenshotsFolder" = "Screenshots";
       "spectaclerc"."VideoSave"."preferredVideoFormat" = 2;
       "spectaclerc"."VideoSave"."translatedScreencastsFolder" = "Screencasts";
-      "plasmashellrc"."PIMEventsPlugin"."calendars" = 265; # set the calendar used for the clock/calendar widget in the top panel
-      "plasma_calendar_holiday_regions"."General"."selectedRegions" = "hu_hu"; # set holidays for the widget
-      "kwinrc"."Plugins"."translucencyEnabled" = true; # enable and set up translucency for inactive windows
-      "kwinrc"."Effect-translucency" = {
-	Inactive = 90;
-	MoveResize = 100;
-      };
     };
   };
 }

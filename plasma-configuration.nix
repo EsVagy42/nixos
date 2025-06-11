@@ -31,6 +31,74 @@
 	};
       }
     ];
+    powerdevil = {
+      AC = {
+	dimDisplay = {
+	  enable = true;
+	  idleTimeout = 600;
+	};
+	turnOffDisplay = {
+	  idleTimeout = 900;
+	  idleTimeoutWhenLocked = 30;
+	};
+	autoSuspend = {
+	  action = "nothing";
+	};
+	displayBrightness = 100;
+	powerButtonAction = "showLogoutScreen";
+	powerProfile = "performance";
+	whenLaptopLidClosed = "turnOffScreen";
+	whenSleepingEnter = "standbyThenHibernate";
+      };
+      battery = {
+	dimDisplay = {
+	  enable = true;
+	  idleTimeout = 180;
+	};
+	turnOffDisplay = {
+	  idleTimeout = 300;
+	  idleTimeoutWhenLocked = 30;
+	};
+	autoSuspend = {
+	  action = "sleep";
+	  idleTimeout = 600;
+	};
+	displayBrightness = 50;
+	powerButtonAction = "showLogoutScreen";
+	powerProfile = "powerSaving";
+	whenLaptopLidClosed = "turnOffScreen";
+	whenSleepingEnter = "standbyThenHibernate";
+      };
+      lowBattery = {
+	dimDisplay = {
+	  enable = true;
+	  idleTimeout = 120;
+	};
+	turnOffDisplay = {
+	  idleTimeout = 180;
+	  idleTimeoutWhenLocked = 30;
+	};
+	autoSuspend = {
+	  action = "hibernate";
+	  idleTimeout = 300;
+	};
+	displayBrightness = 25;
+	powerButtonAction = "showLogoutScreen";
+	powerProfile = "powerSaving";
+	whenLaptopLidClosed = "turnOffScreen";
+	whenSleepingEnter = "standbyThenHibernate";
+      };
+
+      batteryLevels = {
+	criticalAction = "hibernate";
+	criticalLevel = 5;
+	lowLevel = 20;
+      };
+
+      general = {
+	pausePlayersOnSuspend = true;
+      };
+    };
     shortcuts = {
       "ActivityManager"."switch-to-activity-7815803c-28fd-459f-8c3e-1add2e558ae8" =
         [ ];

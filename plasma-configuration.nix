@@ -546,6 +546,10 @@
     };
     configFile = {
       "plasmashellrc"."PIMEventsPlugin"."calendars" = 265; # set the calendar used for the clock/calendar widget in the top panel
+      "plasmashellrc"."PlasmaViews/Panel 25" = {
+	"floating" = 0;
+	"panelOpacity" = 2;
+      };
       "plasma_calendar_holiday_regions"."General"."selectedRegions" = "hu_hu"; # set holidays for the widget
       "kwinrc"."Plugins"."translucencyEnabled" = true; # enable and set up translucency for inactive windows
       "kwinrc"."Effect-translucency" = {
@@ -1448,40 +1452,6 @@
         "https://online-go.com/";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/General"."useDefaultUrl" =
         true;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195"."immutability" =
-        1;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195"."plugin" =
-        "org.kde.plasma.kickoff";
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195/Configuration"."PreloadWeight" =
-        100;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195/Configuration"."popupHeight" =
-        508;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195/Configuration"."popupWidth" =
-        647;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195/Configuration/ConfigDialog"."DialogHeight" =
-        540;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195/Configuration/ConfigDialog"."DialogWidth" =
-        720;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/195/Configuration/General"."favoritesPortedToKAstats" =
-        true;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196"."immutability" =
-        1;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196"."plugin" =
-        "org.kde.plasma.icontasks";
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/ConfigDialog"."DialogHeight" =
-        540;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/ConfigDialog"."DialogWidth" =
-        720;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."fill" =
-        false;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."launchers" =
-        "";
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/196/Configuration/General"."sortingStrategy" =
-        2;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/197"."immutability" =
-        1;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/197"."plugin" =
-        "org.kde.plasma.marginsseparator";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/199"."immutability" =
         1;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/199"."plugin" =
@@ -1579,7 +1549,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/93/Configuration"."popupWidth" =
         360;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/General"."AppletOrder" =
-        "195;196;197;93;86;57;203;200;87;194;199;151;180;152;181;179;30";
+        "93;86;57;203;200;87;194;199;151;180;152;181;179;30";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."activityId" =
         "";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."formfactor" =

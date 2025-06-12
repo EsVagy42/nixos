@@ -248,7 +248,7 @@
       "kwin"."Window Maximize" = [];
       "kwin"."Window Maximize Horizontal" = [ ];
       "kwin"."Window Maximize Vertical" = [ ];
-      "kwin"."Window Minimize" = [];
+      "kwin"."Window Minimize" = "Meta+PgDown";
       "kwin"."Window Move" = [ ];
       "kwin"."Window Move Center" = [ ];
       "kwin"."Window No Border" = [ ];

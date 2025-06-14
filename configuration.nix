@@ -163,6 +163,7 @@
       kdePackages.kdepim-addons
       kdePackages.kdepim-runtime
       kdePackages.kcontacts
+      kdePackages.plasma-vault
       libqalculate
       qalculate-qt
 

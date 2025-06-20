@@ -1701,11 +1701,12 @@
 	  DialogHeight = 540;
 	  DialogWidth = 720;
 	};
-	"Containments/25/Applets/205/Confirmation/General" = {
+	"Containments/25/Applets/205/Configuration/General" = {
 	  fill = false;
 	  groupingStrategy = 0;
 	  middleClickAction = "Close";
 	  showOnlyMinimized = true;
+	  wheelEnabled = "AllTask";
 	  wheelSkipMinimized = false;
 	};
       };

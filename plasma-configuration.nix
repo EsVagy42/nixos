@@ -533,7 +533,7 @@
       "services/org.kde.spectacle.desktop"."RecordWindow" = [ ];
     };
     configFile = {
-      "plasmashellrc"."PIMEventsPlugin"."calendars" = 265; # set the calendar used for the clock/calendar widget in the top panel
+      "plasmashellrc"."PIMEventsPlugin"."calendars" = "288"; # set the calendar used for the clock/calendar widget in the top panel
       "plasmashellrc"."PlasmaViews/Panel 25" = {
 	"floating" = 0;
 	"panelOpacity" = 2;

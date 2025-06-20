@@ -537,6 +537,7 @@
       "plasmashellrc"."PlasmaViews/Panel 25" = {
 	"floating" = 0;
 	"panelOpacity" = 2;
+	"floatingApplets" = 1;
       };
       "plasma_calendar_holiday_regions"."General"."selectedRegions" = "hu_hu"; # set holidays for the widget
       "kwinrc"."Plugins"."translucencyEnabled" = true; # enable and set up translucency for inactive windows

@@ -19,18 +19,6 @@
     };
     workspace.lookAndFeel = "org.kde.breezedark.desktop";
     workspace.theme = "breeze-dark";
-    window-rules = [
-      {
-	description = "No decorations";
-	match = {};
-	apply = {
-	  "noborder" = {
-	    apply = "initially";
-	    value = true;
-	  };
-	};
-      }
-    ];
     powerdevil = {
       AC = {
 	dimDisplay = {

@@ -1537,7 +1537,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/93/Configuration"."popupWidth" =
         360;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/General"."AppletOrder" =
-        "93;86;57;203;200;87;194;199;151;180;152;181;179;30";
+        "205;93;86;57;203;200;87;194;199;151;180;152;181;179;30";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."activityId" =
         "";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."formfactor" =
@@ -1690,6 +1690,27 @@
         "https://online-go.com/";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments25Appletsts/195/Configuration/General"."favoritesPortedToKAstats" =
         true;
+
+      # icons only task manager for minimized tasks
+      "plasma-org.kde.plasma.desktop-appletsrc" = {
+	"Containments/25/Applets/205" = {
+	  immutability = 1;
+	  plugin = "org.kde.plasma.icontasks";
+	};
+	"Containments/25/Applets/205/Configuration/ConfigDialog" = {
+	  DialogHeight = 540;
+	  DialogWidth = 720;
+	};
+	"Containments/25/Applets/205/Confirmation/General" = {
+	  fill = false;
+	  groupingStrategy = 0;
+	  middleClickAction = "Close";
+	  showOnlyMinimized = true;
+	  wheelSkipMinimized = false;
+	};
+      };
+
+
       "plasma-org.kde.plasma.desktop-appletsrc"."ScreenMapping"."itemsOnDisabledScreens" =
         "";
       "plasma-org.kde.plasma.desktop-appletsrc"."ScreenMapping"."screenMapping" =

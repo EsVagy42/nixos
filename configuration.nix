@@ -159,6 +159,7 @@
       kdePackages.kcalc
       kdePackages.kclock
       kdePackages.kholidays
+      kdePackages.akonadi-calendar
       kdePackages.libkdepim
       kdePackages.kdepim-addons
       kdePackages.kdepim-runtime

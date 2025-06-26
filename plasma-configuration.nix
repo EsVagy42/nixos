@@ -1692,6 +1692,8 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments25Appletsts/195/Configuration/General"."favoritesPortedToKAstats" =
         true;
 
+      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/30/Applets/47/Configuration/General"."showNumberOfConnectedDevices" = true;
+
       # icons only task manager for minimized tasks
       "plasma-org.kde.plasma.desktop-appletsrc" = {
 	"Containments/25/Applets/205" = {

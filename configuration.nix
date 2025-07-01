@@ -167,7 +167,7 @@
       libqalculate
       qalculate-qt
 
-      floorp
+      librewolf
       kdePackages.plasma-browser-integration
       kdePackages.xdg-desktop-portal-kde
 

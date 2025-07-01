@@ -53,8 +53,8 @@
 
   home.file.".config/mimeapps.list" = { source = ./mimeapps/mimeapps.list; };
 
-  home.file.".mozilla/native-messaging-hosts" = {
-    source = ./mozilla/native-messaging-hosts;
+  home.file.".librewolf/native-messaging-hosts" = {
+    source = ./librewolf/native-messaging-hosts;
     recursive = true;
   };
 }

@@ -1415,36 +1415,6 @@
         ''["memory/physical/usedPercent"]'';
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/181/Configuration/org.kde.ksysguard.colorgrid/General"."columnCount" =
         1;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194"."immutability" =
-        1;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194"."plugin" =
-        "org.kde.plasma.webbrowser";
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration"."PreloadWeight" =
-        100;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration"."popupHeight" =
-        600;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration"."popupWidth" =
-        800;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/ConfigDialog"."DialogHeight" =
-        540;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/ConfigDialog"."DialogWidth" =
-        720;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/General"."defaultUrl" =
-        "https://online-go.com";
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/General"."enableNavigationBar" =
-        false;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/General"."favIcon" =
-        "https://cdn.online-go.com/icons/favicon-32x32.png";
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/General"."privateBrowsing" =
-        false;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/General"."url" =
-        "https://online-go.com/";
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/194/Configuration/General"."useDefaultUrl" =
-        true;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/199"."immutability" =
-        1;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/199"."plugin" =
-        "org.kde.plasma.marginsseparator";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200"."immutability" =
         1;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/200"."plugin" =
@@ -1538,7 +1508,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/93/Configuration"."popupWidth" =
         360;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/General"."AppletOrder" =
-        "205;93;86;57;203;200;87;194;199;151;180;152;181;179;30";
+        "205;93;86;57;203;200;87;151;180;152;181;179;30";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."activityId" =
         "";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."formfactor" =
@@ -1640,7 +1610,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44"."plugin" =
         "org.kde.plasma.brightness";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration"."PreloadWeight" =
-        74;
+        79;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogHeight" =
         540;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31/Applets/44/Configuration/ConfigDialog"."DialogWidth" =

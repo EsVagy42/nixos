@@ -1662,6 +1662,37 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments25Appletsts/195/Configuration/General"."favoritesPortedToKAstats" =
         true;
 
+      "plasma-org.kde.plasma.desktop-appletsrc" = {
+
+	# temperature widget
+	"Containments/25/Applets/210" = {
+	  immutability = 1;
+	  plugin = "org.kde.plasma.systemmonitor";
+	};
+	"Containments/25/Applets/210/Configuration" = {
+	  CurrentPreset = "org.kde.plasma.systemmonitor";
+	  PreloadWeight = 100;
+	};
+	"Containments/25/Applets/210/Configuration/Appearance" = {
+	  chartFace = "org.kde.ksysguard.piechart";
+	  title = "CPU Temperature";
+	};
+	"Containments/25/Applets/210/Configuration/Sensors" = {
+	  highPrioritySensorIds = ''["cpu/all/maximumTemperature"]'';
+	  lowPrioritySensorIds = ''["cpu/all/averageTemperature","cpu/all/minimumTemperature"]'';
+	  totalSensors = ''["cpu/all/maximumTemperature","cpu/all/minimumTemperature"]'';
+	};
+	"Containments/25/Applets/210/Configuration/SensorColors" = {
+	  "cpu/all/maximumTemperature" = "0,162,255";
+	};
+	"Containments/25/Applets/210/Configuration/org.kde.ksysguard.piechart/General" = {
+	  rangeAuto = false;
+	  rangeFrom = 20;
+	  rangeTo = 100;
+	};
+
+      };
+
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/30/Applets/47/Configuration/General"."showNumberOfConnectedDevices" = true;
 
       # icons only task manager for minimized tasks

@@ -1508,7 +1508,7 @@
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/93/Configuration"."popupWidth" =
         360;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/General"."AppletOrder" =
-        "205;93;86;57;203;200;87;151;180;152;181;179;30";
+        "205;93;86;57;203;200;87;151;180;210;152;181;179;30";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."activityId" =
         "";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/31"."formfactor" =

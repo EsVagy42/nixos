@@ -186,7 +186,7 @@
       clang-tools
       bash-language-server
       nixd
-      nixfmt
+      nixfmt-rfc-style
       marksman
       kdePackages.markdownpart
       lua

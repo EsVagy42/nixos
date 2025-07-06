@@ -244,6 +244,8 @@
 
       wineWowPackages.staging
       winetricks
+
+      jdk # needed for stellwerksim
     ];
   in if config.productiveBuild then
     basePackages

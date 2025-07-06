@@ -167,6 +167,8 @@
       libqalculate
       qalculate-qt
 
+      maliit-keyboard
+
       librewolf
       kdePackages.plasma-browser-integration
       kdePackages.xdg-desktop-portal-kde

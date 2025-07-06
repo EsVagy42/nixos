@@ -988,7 +988,7 @@
         {"layoutDirection":"horizontal","tiles":x5b{"width":0.25},{"width":0.5},{"width":0.25}x5d}'';
       "kwinrc"."Tiling/fa85946f-b1b2-58bd-9cc0-b3b03025ae10"."tiles" = ''
         {"layoutDirection":"horizontal","tiles":x5b{"width":0.25},{"width":0.5},{"width":0.25}x5d}'';
-      "kwinrc"."Wayland"."VirtualKeyboardEnabled" = false;
+      "kwinrc"."Wayland"."InputMethod" = "/run/current-system/sw/share/applications/com.github.maliit.keyboard.desktop";
       "kwinrc"."Xwayland"."Scale" = 1;
       "kwinrc"."org.kde.kdecoration2"."ButtonsOnRight" = "HBFIAX";
       "kxkbrc"."Layout"."Options" = "compose:ralt";

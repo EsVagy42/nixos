@@ -248,6 +248,8 @@
       winetricks
 
       jdk # needed for stellwerksim
+
+      chess-clock
     ];
   in if config.productiveBuild then
     basePackages

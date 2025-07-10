@@ -954,6 +954,8 @@
       "kwinrc"."Plugins"."mousemarkEnabled" = true;
       "kwinrc"."Plugins"."shakecursorEnabled" = false;
       "kwinrc"."Plugins"."thumbnailasideEnabled" = true;
+      "kwinrc"."Script-karousel"."gestureScroll" = true;
+      "kwinrc"."Script-karousel"."gestureScrollInvert" = true;
       "kwinrc"."Script-karousel"."manualResizeStep" = 256;
       "kwinrc"."Script-karousel"."presetWidths" = "33%, 50%, 67%, 100%";
       "kwinrc"."SubSession: 13d011ce-e331-44a7-be21-3e4a4cf6b43a"."active" =

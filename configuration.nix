@@ -2,11 +2,126 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+let
+  basePackages = with pkgs; [
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    kdePackages.krecorder
+    kdePackages.kweather
+    kdePackages.kcharselect
+    kdePackages.filelight
+    kdePackages.kcalc
+    kdePackages.kclock
+    kdePackages.kholidays
+    kdePackages.akonadi-calendar
+    kdePackages.libkdepim
+    kdePackages.kdepim-addons
+    kdePackages.kdepim-runtime
+    kdePackages.kcontacts
+    libqalculate
+    qalculate-qt
 
+    maliit-keyboard
+
+    librewolf
+    kdePackages.plasma-browser-integration
+    kdePackages.xdg-desktop-portal-kde
+
+    kdePackages.zanshin
+    kdePackages.korganizer
+    kdePackages.merkuro
+    kdePackages.francis
+
+    wl-clipboard
+    lldb
+    kdePackages.kompare
+    kdePackages.kdevelop
+    kdePackages.kcachegrind
+    gcc
+    gdb
+    clang-tools
+    bash-language-server
+    nixd
+    nixfmt-rfc-style
+    marksman
+    kdePackages.markdownpart
+    lua
+    lua-language-server
+    cppcheck
+    nixos-shell
+
+    kdePackages.qtwebengine
+    kdePackages.qtlocation
+    kdePackages.ksystemstats # needed for the resource widgets
+    aspell # needed for spell checking
+    aspellDicts.en
+    aspellDicts.hu
+    kdePackages.qtmultimedia
+    kdePackages.karousel
+    (
+      with pkgs;
+      import ./kwin4_effect_geometry_change/kwin4_effect_geometry_change.nix {
+        inherit lib;
+        inherit stdenv;
+        inherit fetchFromGitHub;
+        kpackage = kdePackages.kpackage;
+        kwin = kdePackages.kwin;
+        inherit nodejs;
+      }
+    )
+
+    gimp
+    inkscape
+    kdePackages.kdenlive
+
+    libreoffice
+    pandoc
+    texliveFull
+
+    beeper
+  ];
+  unproductivePackages = with pkgs; [
+    yt-dlp
+
+    srb2
+    superTuxKart
+    kdePackages.kjumpingcube
+    kdePackages.kigo
+    gnugo
+    crawlTiles
+    prismlauncher
+    mindustry
+    (
+      with pkgs;
+      import ./jgrpp-0.65.2/jgrpp-0.65.2.nix {
+        inherit fetchFromGitHub;
+        inherit openttd;
+        inherit zstd;
+      }
+    )
+
+    # retroarch-full
+
+    wineWowPackages.staging
+    winetricks
+
+    jdk # needed for stellwerksim
+
+    chess-clock
+  ];
+in
 {
   nixpkgs.config.allowUnfree = false;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   nix.settings.auto-optimise-store = true;
   nix.gc = {
     automatic = true;
@@ -20,8 +135,9 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.useOSProber = true;
-  system.nixos.label = builtins.replaceStrings [ "\n" " " ] [ "" "_" ]
-    (builtins.readFile ./commit_text);
+  system.nixos.label = builtins.replaceStrings [ "\n" " " ] [ "" "_" ] (
+    builtins.readFile ./commit_text
+  );
 
   # Needed for audio to work
   boot.kernelPackages = pkgs.linuxPackagesFor pkgs.linux_latest;
@@ -88,20 +204,24 @@
   users.users.esvagy = {
     isNormalUser = true;
     description = "EsVagy";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     initialPassword = "initialPassword";
   };
 
   programs.kdeconnect.enable = true;
 
   programs.steam = {
-    enable = !config.productiveBuild;
+    enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
     localNetworkGameTransfers.openFirewall = true;
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
     builtins.elem (pkgs.lib.getName pkg) [
       "beeper"
       "steam"
@@ -144,117 +264,14 @@
     };
   };
 
-  environment.sessionVariables = { GTK_USE_PORTAL = 1; };
+  environment.sessionVariables = {
+    GTK_USE_PORTAL = 1;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = let
-    basePackages = with pkgs; [
-      #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-      #  wget
-      kdePackages.krecorder
-      kdePackages.kweather
-      kdePackages.kcharselect
-      kdePackages.filelight
-      kdePackages.kcalc
-      kdePackages.kclock
-      kdePackages.kholidays
-      kdePackages.akonadi-calendar
-      kdePackages.libkdepim
-      kdePackages.kdepim-addons
-      kdePackages.kdepim-runtime
-      kdePackages.kcontacts
-      libqalculate
-      qalculate-qt
-
-      maliit-keyboard
-
-      librewolf
-      kdePackages.plasma-browser-integration
-      kdePackages.xdg-desktop-portal-kde
-
-      kdePackages.zanshin
-      kdePackages.korganizer
-      kdePackages.merkuro
-      kdePackages.francis
-
-      wl-clipboard
-      lldb
-      kdePackages.kompare
-      kdePackages.kdevelop
-      kdePackages.kcachegrind
-      gcc
-      gdb
-      clang-tools
-      bash-language-server
-      nixd
-      nixfmt-rfc-style
-      marksman
-      kdePackages.markdownpart
-      lua
-      lua-language-server
-      cppcheck
-      nixos-shell
-
-      kdePackages.qtwebengine
-      kdePackages.qtlocation
-      kdePackages.ksystemstats # needed for the resource widgets
-      aspell # needed for spell checking
-      aspellDicts.en
-      aspellDicts.hu
-      kdePackages.qtmultimedia
-      kdePackages.karousel
-      (with pkgs;
-        import ./kwin4_effect_geometry_change/kwin4_effect_geometry_change.nix {
-          inherit lib;
-          inherit stdenv;
-          inherit fetchFromGitHub;
-          kpackage = kdePackages.kpackage;
-          kwin = kdePackages.kwin;
-          inherit nodejs;
-        })
-
-      gimp
-      inkscape
-      kdePackages.kdenlive
-
-      libreoffice
-      pandoc
-      texliveFull
-
-      beeper
-    ];
-    unproductivePackages = with pkgs; [
-      yt-dlp
-
-      srb2
-      superTuxKart
-      kdePackages.kjumpingcube
-      kdePackages.kigo
-      gnugo
-      crawlTiles
-      prismlauncher
-      mindustry
-      (with pkgs;
-        import ./jgrpp-0.65.2/jgrpp-0.65.2.nix {
-          inherit fetchFromGitHub;
-          inherit openttd;
-          inherit zstd;
-        })
-
-      retroarch-full
-
-      wineWowPackages.staging
-      winetricks
-
-      jdk # needed for stellwerksim
-
-      chess-clock
-    ];
-  in if config.productiveBuild then
-    basePackages
-  else
-    basePackages ++ unproductivePackages;
+  # putting environment.systemPackages in specialisation does not work
+  environment.systemPackages = if config.specialisation != {} then basePackages ++ unproductivePackages else basePackages;
 
   fonts.packages = with pkgs; [ nerd-fonts.hack ];
 
@@ -272,8 +289,14 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [ 2350 3450 ]; # needed for tmnf
-  networking.firewall.allowedUDPPorts = [ 2350 3450 ]; # needed for tmnf
+  networking.firewall.allowedTCPPorts = [
+    2350
+    3450
+  ]; # needed for tmnf
+  networking.firewall.allowedUDPPorts = [
+    2350
+    3450
+  ]; # needed for tmnf
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
@@ -294,36 +317,51 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
 
-  services.blocky = {
-    enable = config.productiveBuild;
-    settings = {
-      ports.dns = 53; # Port for incoming DNS Queries.
-      upstreams.groups.default = [
-        "https://one.one.one.one/dns-query" # Using Cloudflare's DNS over HTTPS server for resolving queries.
-      ];
-      # For initially solving DoH/DoT Requests when no system Resolver is available.
-      bootstrapDns = {
-        upstream = "https://one.one.one.one/dns-query";
-        ips = [ "1.1.1.1" "1.0.0.1" ];
-      };
-      #Enable Blocking of certian domains.
-      blocking = {
-        blackLists = {
-          unproductive = [''
-            |
-            	    www.youtube.com
-            	    tilvids.com
-            	    mastodon.social
-            	    online-go.com
-            	  ''];
+  networking.nameservers = [ ];
+
+  specialisation = {
+    productive = {
+      inheritParentConfig = true;
+      configuration = {
+        programs.steam.enable = lib.mkOverride 99 false;
+        services.blocky = {
+          enable = true;
+          settings = {
+            ports.dns = 53; # port for incoming dns queries.
+            upstreams.groups.default = [
+              "https://one.one.one.one/dns-query" # using cloudflare's dns over https server for resolving queries.
+            ];
+            # For initially solving DoH/DoT Requests when no system Resolver is available.
+            bootstrapDns = {
+              upstream = "https://one.one.one.one/dns-query";
+              ips = [
+                "1.1.1.1"
+                "1.0.0.1"
+              ];
+            };
+            #Enable Blocking of certian domains.
+            blocking = {
+              blackLists = {
+                unproductive = [
+                  ''
+                    		|
+                    		www.youtube.com
+                    		tilvids.com
+                    		mastodon.social
+                    		online-go.com
+                    		''
+                ];
+              };
+              #Configure what block categories are used
+              clientGroupsBlock = {
+                default = [ "unproductive" ];
+              };
+            };
+          };
         };
-        #Configure what block categories are used
-        clientGroupsBlock = { default = [ "unproductive" ]; };
+        networking.nameservers = lib.mkOverride 99 [ "127.0.0.1" ];
       };
     };
   };
-  networking.nameservers =
-    if config.productiveBuild then [ "127.0.0.1" ] else [ ];
 
 }
-

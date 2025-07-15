@@ -270,8 +270,10 @@ in
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  # putting environment.systemPackages in specialisation does not work
-  environment.systemPackages = if config.specialisation != {} then basePackages ++ unproductivePackages else basePackages;
+  # configuring this with lib.mkDefault always uses the productive definition and configuring the productive definition with an override value less than a 100 produces a non-working system
+  environment.systemPackages = lib.mkIf (config.specialisation != { }) (
+    basePackages ++ unproductivePackages
+  );
 
   fonts.packages = with pkgs; [ nerd-fonts.hack ];
 
@@ -323,6 +325,7 @@ in
     productive = {
       inheritParentConfig = true;
       configuration = {
+        environment.systemPackages = basePackages;
         programs.steam.enable = lib.mkOverride 99 false;
         services.blocky = {
           enable = true;

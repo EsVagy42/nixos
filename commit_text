@@ -1,1 +1,1 @@
-Moved productive specialisation systemPackages to the correct place
+Local packages now use callPackage in configuration.nix

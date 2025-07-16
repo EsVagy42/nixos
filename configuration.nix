@@ -64,17 +64,9 @@ let
     aspellDicts.hu
     kdePackages.qtmultimedia
     kdePackages.karousel
-    (
-      with pkgs;
-      import ./kwin4_effect_geometry_change/kwin4_effect_geometry_change.nix {
-        inherit lib;
-        inherit stdenv;
-        inherit fetchFromGitHub;
-        kpackage = kdePackages.kpackage;
-        kwin = kdePackages.kwin;
-        inherit nodejs;
-      }
-    )
+    (pkgs.lib.callPackageWith (
+      pkgs // pkgs.kdePackages
+    ) ./kwin4_effect_geometry_change/kwin4_effect_geometry_change.nix { })
 
     gimp
     inkscape
@@ -97,14 +89,7 @@ let
     crawlTiles
     prismlauncher
     mindustry
-    (
-      with pkgs;
-      import ./jgrpp-0.65.2/jgrpp-0.65.2.nix {
-        inherit fetchFromGitHub;
-        inherit openttd;
-        inherit zstd;
-      }
-    )
+    (pkgs.callPackage ./jgrpp-0.65.2/jgrpp-0.65.2.nix { })
 
     # retroarch-full
 

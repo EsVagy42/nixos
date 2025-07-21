@@ -56,6 +56,7 @@ let
     cppcheck
     cargo
     rustc
+    rustfmt
     nixos-shell
 
     kdePackages.qtwebengine

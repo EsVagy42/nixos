@@ -54,6 +54,8 @@ let
     lua
     lua-language-server
     cppcheck
+    cargo
+    rustc
     nixos-shell
 
     kdePackages.qtwebengine

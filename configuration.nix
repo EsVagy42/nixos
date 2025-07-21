@@ -336,7 +336,6 @@ in
                     		www.youtube.com
                     		tilvids.com
                     		mastodon.social
-                    		online-go.com
                     		''
                 ];
               };

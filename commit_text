@@ -1,1 +1,1 @@
-Removed online-go blocking from productive build
+Added mkOverride to blocky configuration to make it enabled when the productive specialisation is enabled

@@ -313,7 +313,7 @@ in
         environment.systemPackages = basePackages;
         programs.steam.enable = lib.mkOverride 99 false;
         services.blocky = {
-          enable = true;
+          enable = lib.mkOverride 99 true;
           settings = {
             ports.dns = 53; # port for incoming dns queries.
             upstreams.groups.default = [

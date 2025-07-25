@@ -28,6 +28,7 @@ let
     qalculate-qt
 
     maliit-keyboard
+    espeak
 
     librewolf
     kdePackages.plasma-browser-integration

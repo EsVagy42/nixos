@@ -242,7 +242,7 @@ in
         ids = [ "*" ];
         extraConfig = ''
           [main]
-          capslock = layer(capslock)
+          capslock = overload(capslock, capslock)
 
           [capslock]
           h = left

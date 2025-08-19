@@ -991,7 +991,7 @@
       "kwinrc"."Wayland"."InputMethod" = "/run/current-system/sw/share/applications/com.github.maliit.keyboard.desktop";
       "kwinrc"."Xwayland"."Scale" = 1;
       "kwinrc"."org.kde.kdecoration2"."ButtonsOnRight" = "HBFIAX";
-      "kxkbrc"."Layout"."Options" = "compose:ralt";
+      "kxkbrc"."Layout"."Options" = "compose:ralt,compose:caps";
       "kxkbrc"."Layout"."ResetOldOptions" = true;
       "plasma-localerc"."Formats"."LANG" = "en_US.UTF-8";
       "plasma-localerc"."Formats"."LC_ADDRESS" = "en_US.UTF-8";

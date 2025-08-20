@@ -241,14 +241,48 @@ in
       default = {
         ids = [ "*" ];
         extraConfig = ''
-          [main]
-          capslock = overload(capslock, capslock)
+          	[main]
+          	capslock = overload(capslock, oneshot(accent))
 
-          [capslock]
-          h = left
-          j = down
-          k = up
-          l = right
+          	[capslock]
+          	h = left
+          	j = down
+          	k = up
+          	l = right
+
+          	[third_accent]
+          	o = macro(rightalt = o)
+          	u = macro(rightalt = u)
+
+          	[third_accent+shift]
+          	o = macro(rightalt = O)
+          	u = macro(rightalt = U)
+
+          	[second_accent]
+          	o = macro(rightalt " o)
+          	u = macro(rightalt " u)
+          	capslock = oneshot(third_accent)
+
+          	[second_accent+shift]
+          	o = macro(rightalt " O)
+          	u = macro(rightalt " U)
+          	capslock = oneshot(third_accent)
+
+          	[accent]
+          	a = macro(rightalt ' a)
+          	e = macro(rightalt ' e)
+          	i = macro(rightalt ' i)
+          	o = macro(rightalt ' o)
+          	u = macro(rightalt ' u)
+          	capslock = oneshot(second_accent)
+
+          	[accent+shift]
+          	a = macro(rightalt ' A)
+          	e = macro(rightalt ' E)
+          	i = macro(rightalt ' I)
+          	o = macro(rightalt ' O)
+          	u = macro(rightalt ' U)
+          	capslock = oneshot(second_accent)
         '';
       };
     };

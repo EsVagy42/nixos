@@ -59,6 +59,7 @@ let
     rustc
     rustfmt
     nixos-shell
+    godot
 
     kdePackages.qtwebengine
     kdePackages.qtlocation

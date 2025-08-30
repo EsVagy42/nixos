@@ -80,6 +80,8 @@ let
     libreoffice
     pandoc
     texliveFull
+
+    discord
   ];
   unproductivePackages = with pkgs; [
     yt-dlp
@@ -232,6 +234,7 @@ in
       "libretro-snes9x2005"
       "libretro-snes9x2005-plus"
       "libretro-snes9x2010"
+      "discord"
     ];
 
   services.keyd = {

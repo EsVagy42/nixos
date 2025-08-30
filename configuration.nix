@@ -80,8 +80,6 @@ let
     libreoffice
     pandoc
     texliveFull
-
-    beeper
   ];
   unproductivePackages = with pkgs; [
     yt-dlp

@@ -81,7 +81,6 @@ let
     texliveFull
 
     discord
-    caprine
   ];
   unproductivePackages = with pkgs; [
     yt-dlp

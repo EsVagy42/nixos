@@ -1,13 +1,13 @@
 [Desktop Entry]
 Comment[en_US]=
 Comment=
-Exec=beeper --hidden
+Exec=discord --start-minimized
 GenericName[en_US]=
 GenericName=
 Icon=system-run
 MimeType=
-Name[en_US]=Beeper
-Name=Beeper
+Name[en_US]=discord
+Name=discord
 Path=
 StartupNotify=true
 Terminal=false

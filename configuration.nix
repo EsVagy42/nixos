@@ -62,6 +62,7 @@ let
 
     haskell.compiler.ghcHEAD
     mono
+    netcoredbg
 
     kdePackages.qtwebengine
     kdePackages.qtlocation

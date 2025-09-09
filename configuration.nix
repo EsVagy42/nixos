@@ -61,7 +61,7 @@ let
     nixos-shell
 
     haskell.compiler.ghcHEAD
-    dotnet-sdk
+    dotnet-sdk_9
     netcoredbg
 
     kdePackages.qtwebengine

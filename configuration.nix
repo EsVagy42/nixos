@@ -60,6 +60,9 @@ let
     rustfmt
     nixos-shell
 
+    haskell.compiler.ghcHEAD
+    mono
+
     kdePackages.qtwebengine
     kdePackages.qtlocation
     kdePackages.ksystemstats # needed for the resource widgets

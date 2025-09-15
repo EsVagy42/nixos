@@ -59,6 +59,7 @@ let
     rustc
     rustfmt
     nixos-shell
+    python3
 
     haskell.compiler.ghcHEAD
     dotnet-sdk_9

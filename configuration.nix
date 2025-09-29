@@ -70,7 +70,6 @@ let
     kdePackages.ksystemstats # needed for the resource widgets
     aspell # needed for spell checking
     aspellDicts.en
-    aspellDicts.hu
     kdePackages.qtmultimedia
     kdePackages.karousel
     (pkgs.lib.callPackageWith (

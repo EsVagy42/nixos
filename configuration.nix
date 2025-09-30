@@ -78,6 +78,7 @@ let
 
     gimp
     inkscape
+    rnote # this comment is here because git wouldn't add this file otherwise
     kdePackages.kdenlive
 
     libreoffice
@@ -363,12 +364,12 @@ in
               blackLists = {
                 unproductive = [
                   ''
-                    		|
-                    		www.youtube.com
-                    		tilvids.com
-                    		mastodon.social
-				underhound.eu
-                    		''
+                                        		|
+                                        		www.youtube.com
+                                        		tilvids.com
+                                        		mastodon.social
+                    				underhound.eu
+                                        		''
                 ];
               };
               #Configure what block categories are used

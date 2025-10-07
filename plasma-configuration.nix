@@ -1715,6 +1715,13 @@
 	};
       };
 
+      "plasma_workspace.notifyrc" = {
+	"Event\\/notification" = { # set notification sound
+	  Action = "Popup|Sound";
+	  Sound = "file:///run/current-system/sw/share/sounds/ocean/stereo/message-attention.oga";
+	};
+      };
+
 
       "plasma-org.kde.plasma.desktop-appletsrc"."ScreenMapping"."itemsOnDisabledScreens" =
         "";

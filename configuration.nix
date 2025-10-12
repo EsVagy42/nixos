@@ -24,6 +24,7 @@ let
     kdePackages.kdepim-addons
     kdePackages.kdepim-runtime
     kdePackages.kcontacts
+    kdePackages.itinerary
     libqalculate
     qalculate-qt
 
@@ -239,6 +240,10 @@ in
       "libretro-snes9x2010"
       "discord"
     ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "olm-3.2.16"
+  ];
 
   services.keyd = {
     enable = true;

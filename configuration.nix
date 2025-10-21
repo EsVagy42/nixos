@@ -39,6 +39,7 @@ let
     kdePackages.korganizer
     kdePackages.merkuro
     kdePackages.francis
+    kdePackages.parley
 
     wl-clipboard
     lldb

@@ -531,6 +531,8 @@
         [ "Search" "Alt+F2" "Alt+Space" "Meta" ];
       "services/org.kde.spectacle.desktop"."RecordRegion" = "Meta+Shift+R";
       "services/org.kde.spectacle.desktop"."RecordWindow" = [ ];
+      "services/net.local.kill-2.desktop"."_launch" = "Meta+Ctrl+F2";
+      "services/net.local.kill.desktop"."_launch" = "Meta+Ctrl+F1";
     };
     configFile = {
       "plasmashellrc"."PIMEventsPlugin"."calendars".persistent = true; # needed for the calendar in the clock widget in the top bar

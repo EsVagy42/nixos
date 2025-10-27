@@ -27,6 +27,7 @@ let
     kdePackages.itinerary
     libqalculate
     qalculate-qt
+    kdotool
 
     maliit-keyboard
     espeak

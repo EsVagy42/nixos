@@ -57,4 +57,9 @@
     source = ./librewolf/native-messaging-hosts;
     recursive = true;
   };
+
+  home.file.".local/share/applications" = {
+    source = ./shortcuts;
+    recursive = true;
+  };
 }

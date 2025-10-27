@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=kill -CONT $(kdotool getwindowpid "$(qdbus org.kde.KWin /KWin queryWindowInfo | awk '$1 == "uuid:" {print $2}')")
+Name=Continue focused program
+NoDisplay=true
+StartupNotify=false
+Type=Application
+X-KDE-GlobalAccel-CommandShortcut=true

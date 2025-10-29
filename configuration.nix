@@ -5,6 +5,7 @@
 {
   config,
   pkgs,
+  pkgs-working-itinerary,
   lib,
   ...
 }:
@@ -24,7 +25,7 @@ let
     kdePackages.kdepim-addons
     kdePackages.kdepim-runtime
     kdePackages.kcontacts
-    kdePackages.itinerary
+    pkgs-working-itinerary.kdePackages.itinerary
     libqalculate
     qalculate-qt
     kdotool

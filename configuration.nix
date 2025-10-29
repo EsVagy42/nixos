@@ -346,12 +346,9 @@ in
 
   networking.nameservers = [ ];
 
-  specialisation = {
-    productive = {
-      inheritParentConfig = true;
-      configuration = {
-        environment.systemPackages = basePackages;
-        programs.steam.enable = lib.mkOverride 99 false;
+  specialisation =
+    let
+      blocky_config = blocked_domains: {
         services.blocky = {
           enable = lib.mkOverride 99 true;
           settings = {
@@ -370,15 +367,7 @@ in
             #Enable Blocking of certian domains.
             blocking = {
               blackLists = {
-                unproductive = [
-                  ''
-                                        		|
-                                        		www.youtube.com
-                                        		tilvids.com
-                                        		mastodon.social
-                    				underhound.eu
-                                        		''
-                ];
+                unproductive = [ blocked_domains ];
               };
               #Configure what block categories are used
               clientGroupsBlock = {
@@ -389,7 +378,39 @@ in
         };
         networking.nameservers = lib.mkOverride 99 [ "127.0.0.1" ];
       };
+      unproductive_sites_addresses = ''
+        		  tilvids.com
+        		  mastodon.social
+        		  underhound.eu
+        		  '';
+      youtube_address = "www.youtube.com";
+    in
+    {
+      productive = {
+        inheritParentConfig = true;
+        configuration = {
+          environment.systemPackages = basePackages;
+          programs.steam.enable = lib.mkOverride 99 false;
+        }
+        // blocky_config (
+          lib.strings.concatStringsSep "\n" [
+            "|"
+            unproductive_sites_addresses
+            youtube_address
+          ]
+        );
+      };
+      no_yt = {
+        inheritParentConfig = true;
+        configuration = {
+          environment.systemPackages = basePackages ++ unproductivePackages;
+        }
+        // blocky_config (
+          lib.strings.concatStringsSep "\n" [
+            "|"
+            youtube_address
+          ]
+        );
+      };
     };
-  };
-
 }

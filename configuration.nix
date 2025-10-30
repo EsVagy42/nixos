@@ -255,36 +255,44 @@ in
       default = {
         ids = [ "*" ];
         extraConfig = ''
-                    	[main]
-                    	capslock = overload(capslock, oneshot(accent))
+          		      [main]
+          		      capslock = overload(capslock, oneshot(accent))
 
-                    	[capslock]
-                    	h = left
-                    	j = down
-                    	k = up
-                    	l = right
+          		      [capslock]
+          		      h = left
+          		      j = down
+          		      k = up
+          		      l = right
 
-                    	[accent]
-                    	a = macro(rightalt ' a)
-                    	e = macro(rightalt ' e)
-                    	i = macro(rightalt ' i)
-                    	o = macro(rightalt ' o)
-          		l = macro(rightalt " o)
-          		. = macro(rightalt = o)
-                    	u = macro(rightalt ' u)
-          		j = macro(rightalt " u)
-          		m = macro(rightalt = u)
+          		      [accent]
+          		      a = macro(rightalt ' a)
+          		      q = macro(rightalt " a)
+          		      e = macro(rightalt ' e)
+          		      i = macro(rightalt ' i)
+          		      o = macro(rightalt ' o)
+          		      l = macro(rightalt " o)
+          		      . = macro(rightalt = o)
+          		      u = macro(rightalt ' u)
+          		      j = macro(rightalt " u)
+          		      m = macro(rightalt = u)
+          		      s = macro(rightalt s s)
+          		      capslock = capslock
+          		      esc = noop
 
-                    	[accent+shift]
-                    	a = macro(rightalt ' A)
-                    	e = macro(rightalt ' E)
-                    	i = macro(rightalt ' I)
-                    	o = macro(rightalt ' O)
-          		l = macro(rightalt " O)
-          		. = macro(rightalt = O)
-                    	u = macro(rightalt ' U)
-          		j = macro(rightalt " U)
-          		m = macro(rightalt = U)
+          		      [accent+shift]
+          		      a = macro(rightalt ' A)
+          		      q = macro(rightalt " A)
+          		      e = macro(rightalt ' E)
+          		      i = macro(rightalt ' I)
+          		      o = macro(rightalt ' O)
+          		      l = macro(rightalt " O)
+          		      . = macro(rightalt = O)
+          		      u = macro(rightalt ' U)
+          		      j = macro(rightalt " U)
+          		      m = macro(rightalt = U)
+          		      s = macro(rightalt S S)
+          		      capslock = capslock
+          		      esc = noop
         '';
       };
     };

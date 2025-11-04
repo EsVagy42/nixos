@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the
@@ -35,7 +40,9 @@
     };
   };
 
-  home.file.".config/konsolerc" = { source = ./konsole/konsolerc; };
+  home.file.".config/konsolerc" = {
+    source = ./konsole/konsolerc;
+  };
 
   home.file.".local/share/konsole/Konsole.profile" = {
     source = ./konsole/Konsole.profile;
@@ -51,15 +58,23 @@
     recursive = true;
   };
 
-  home.file.".config/mimeapps.list" = { source = ./mimeapps/mimeapps.list; };
-
-  home.file.".librewolf/native-messaging-hosts" = {
-    source = ./librewolf/native-messaging-hosts;
-    recursive = true;
+  home.file.".config/mimeapps.list" = {
+    source = ./mimeapps/mimeapps.list;
   };
 
   home.file.".local/share/applications" = {
     source = ./shortcuts;
     recursive = true;
+  };
+
+  programs = {
+    librewolf = {
+      enable = true;
+      nativeMessagingHosts = [ pkgs.kdePackages.plasma-browser-integration ];
+    };
+    brave = {
+      enable = true;
+      nativeMessagingHosts = [ pkgs.kdePackages.plasma-browser-integration ];
+    };
   };
 }

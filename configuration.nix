@@ -34,6 +34,7 @@ let
     espeak
 
     librewolf
+    brave
     kdePackages.plasma-browser-integration
     kdePackages.xdg-desktop-portal-kde
 

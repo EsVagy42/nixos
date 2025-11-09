@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nixpkgs-working-itinerary.url = "github:nixos/nixpkgs/cf3f5c4def3c7b5f1fc012b3d839575dbe552d43";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +21,6 @@
   outputs =
     {
       nixpkgs,
-      nixpkgs-working-itinerary,
       home-manager,
       plasma-manager,
       nixvim,
@@ -40,15 +38,6 @@
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
-	  specialArgs = {
-	    pkgs-working-itinerary = import nixpkgs-working-itinerary {
-	      inherit system;
-	      config.allowUnfree = false;
-	      config.permittedInsecurePackages = [
-		"olm-3.2.16"
-	      ];
-	    };
-	  };
           modules = [
             {
               environment.systemPackages = [ inputs.nixvim.packages.${system}.default ];

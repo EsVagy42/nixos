@@ -67,6 +67,7 @@ let
     haskell.compiler.ghcHEAD
     dotnet-sdk_9
     netcoredbg
+    powershell
 
     kdePackages.qtwebengine
     kdePackages.qtlocation

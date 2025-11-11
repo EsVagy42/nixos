@@ -81,6 +81,7 @@ let
     ) ./kwin4_effect_geometry_change/kwin4_effect_geometry_change.nix { })
 
     gimp
+    krita
     inkscape
     rnote # this comment is here because git wouldn't add this file otherwise
     kdePackages.kdenlive

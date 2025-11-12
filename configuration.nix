@@ -209,6 +209,7 @@ in
       "wheel"
     ];
     initialPassword = "initialPassword";
+    shell = pkgs.nushell;
   };
 
   programs.kdeconnect.enable = true;

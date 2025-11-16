@@ -72,5 +72,13 @@
       enable = true;
       nativeMessagingHosts = [ pkgs.kdePackages.plasma-browser-integration ];
     };
+
+    nushell = {
+      enable = true;
+      settings = {
+        buffer_editor = "nvim";
+	edit_mode = "vi";
+      };
+    };
   };
 }

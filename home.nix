@@ -32,14 +32,6 @@
     userEmail = "sltamagotchi@gmail.com";
   };
 
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Breeze-Dark";
-      package = pkgs.kdePackages.breeze-gtk;
-    };
-  };
-
   home.file.".config/konsolerc" = {
     source = ./konsole/konsolerc;
   };

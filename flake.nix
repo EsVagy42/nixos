@@ -33,27 +33,35 @@
         config.allowUnfree = false;
       };
       lib = nixpkgs.lib;
+      baseModules = [
+        {
+          environment.systemPackages = [ inputs.nixvim.packages.${system}.default ];
+        }
+        ./configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
+
+          home-manager.users.esvagy = {
+            imports = [ ./home.nix ];
+          };
+        }
+      ];
     in
     {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
           inherit system;
-          modules = [
-            {
-              environment.systemPackages = [ inputs.nixvim.packages.${system}.default ];
-            }
-            ./configuration.nix
+          modules = baseModules ++ [
             ./devices/default/default.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.sharedModules = [ plasma-manager.homeManagerModules.plasma-manager ];
-
-              home-manager.users.esvagy = {
-                imports = [ ./home.nix ];
-              };
-            }
+          ];
+        };
+        live = lib.nixosSystem {
+          inherit system;
+          modules = baseModules ++ [
+            (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
           ];
         };
       };

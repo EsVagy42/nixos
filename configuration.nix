@@ -89,6 +89,8 @@ let
     texliveFull
 
     discord
+
+    nextcloud-client
   ];
   unproductivePackages = with pkgs; [
     yt-dlp

@@ -45,10 +45,10 @@
     recursive = true;
   };
 
-  home.file.".config/autostart" = {
-    source = ./startup;
-    recursive = true;
-  };
+  # home.file.".config/autostart" = {
+  #   source = ./startup;
+  #   recursive = true;
+  # };
 
   home.file.".config/mimeapps.list" = {
     source = ./mimeapps/mimeapps.list;

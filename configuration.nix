@@ -88,7 +88,7 @@ let
     pandoc
     texliveFull
 
-    discord
+    element-desktop
 
     nextcloud-client
   ];

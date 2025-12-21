@@ -88,7 +88,7 @@ let
     pandoc
     texliveFull
 
-    kdePackages.neochat
+    element-desktop
 
     nextcloud-client
   ];

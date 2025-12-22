@@ -1659,7 +1659,7 @@
         34;
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/8/Applets/22/Configuration"."PreloadWeight" =
         34;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments25Appletsts/194/Configuration/General"."url" =
+      "plasma-org.kde.plasma.desktop-appletsrc"."Containments25Appletsts/194/Configuration/General"."url" = # why is this here?
         "https://online-go.com/";
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments25Appletsts/195/Configuration/General"."favoritesPortedToKAstats" =
         true;
@@ -1696,6 +1696,9 @@
       };
 
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/30/Applets/47/Configuration/General"."showNumberOfConnectedDevices" = true;
+      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/30/Applets/211/Configuration" = {
+	PreloadWeight = 42;
+      };
 
       # icons only task manager for minimized tasks
       "plasma-org.kde.plasma.desktop-appletsrc" = {

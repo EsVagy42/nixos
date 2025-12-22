@@ -1696,9 +1696,6 @@
       };
 
       "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/30/Applets/47/Configuration/General"."showNumberOfConnectedDevices" = true;
-      "plasma-org.kde.plasma.desktop-appletsrc"."Containments/25/Applets/30/General" = {
-	hiddenItems = "org.kde.plasma.kweather_1x4";
-      };
 
       # icons only task manager for minimized tasks
       "plasma-org.kde.plasma.desktop-appletsrc" = {

@@ -87,8 +87,6 @@ let
     pandoc
     texliveFull
 
-    element-desktop
-
     nextcloud-client
   ];
   unproductivePackages = with pkgs; [

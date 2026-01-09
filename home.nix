@@ -73,5 +73,16 @@
 	edit_mode = "vi";
       };
     };
+
+    element-deskop = {
+      enable = true;
+      settings = {
+	features = {
+	  feature_video_rooms = true;
+	  feature_group_calls = true;
+	  feature_element_call_video_rooms = true;
+	};
+      };
+    };
   };
 }

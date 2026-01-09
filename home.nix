@@ -74,7 +74,7 @@
       };
     };
 
-    element-deskop = {
+    element-desktop = {
       enable = true;
       settings = {
 	features = {

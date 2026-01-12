@@ -20,6 +20,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       home-manager,
       plasma-manager,
@@ -62,8 +63,15 @@
           inherit system;
           modules = baseModules ++ [
             (nixpkgs + "/nixos/modules/installer/cd-dvd/installation-cd-minimal.nix")
+            {
+              disabledModules = [
+                "profiles/all-hardware.nix"
+                "profiles/base.nix"
+              ];
+            }
           ];
         };
       };
+      packages.${system}.live = self.nixosConfigurations.live.config.system.build.isoImage;
     };
 }

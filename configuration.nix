@@ -101,7 +101,6 @@ let
     prismlauncher
     mindustry
     xonotic
-    (pkgs.callPackage ./jgrpp-0.65.2/jgrpp-0.65.2.nix { })
 
     # retroarch-full
 
